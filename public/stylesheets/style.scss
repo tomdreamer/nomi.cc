@@ -1,10 +1,12 @@
 /*
-NoNameYET Project theme 
-https://getbootstrap.com/docs/4.1/getting-started/theming/
-
-Variables list available here :
+NONAME PROJECT THEME 0.1 
+BS SASS variables list here :
 https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
 */
+
+/* * * * * * * * * * * * * */
+/* BS VARIABLES OVERRIDES  */
+/* * * * * * * * * * * * * */
 
 // @import url("https://fonts.googleapis.com/css?family=Karla|Rubik:500");
 // $font-family-sans-serif: "Karla", Arial, sans-serif !default;
@@ -16,20 +18,76 @@ $headings-font-family: "Asap", Arial, sans-serif !default;
 $headings-font-weight: 600 !default;
 
 $theme-colors: (
-  "primary": #15d18f,
-  "secondary": rgba(26, 0, 221, 1),
+  "primary": rgba(26, 0, 221, 1),
+  "secondary": #15d18f,
   "danger": #ff4136,
   "dark": #0e1329
 );
 
-/* Navbar */
 @import "node_modules/bootstrap/scss/bootstrap";
+
+/* * * * * * * * * * * * * */
+/* THEME SPECIFIC STYLING  */
+/* * * * * * * * * * * * * */
+
+/* Body wrapping */
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.main {
+  padding: 56px 0;
+}
+
+/* Navbar */
+
 .navbar .dropdown-menu .form-control {
   width: 200px;
+}
+
+/* 404 Page */
+
+.fill-404 {
+  background: linear-gradient(290deg, #5dd9b9, #7f81c6, #a2e6e6);
+  background-size: 600% 600%;
+
+  -webkit-animation: gradient 17s ease infinite;
+  -moz-animation: gradient 17s ease infinite;
+  animation: gradient 17s ease infinite;
+
+  @-webkit-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @-moz-keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  @keyframes gradient {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
 }

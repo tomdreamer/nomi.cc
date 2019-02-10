@@ -20,10 +20,14 @@
 </head>
 
 <body>
+
 	{{> layout_navbar}}
-	<div class="container pt-5">
-		{{{body}}}
-	</div>
+	<section class="main">
+		<div class="container py-4 h-100">
+			{{{body}}}
+		</div>
+	</section>
+	{{> layout_footer}}
 
 	<script src="/javascripts/script.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
