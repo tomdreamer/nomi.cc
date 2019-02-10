@@ -1,1 +1,33 @@
-/* Import Bootstrap source */
+/*
+NoNameYET Project theme 
+https://getbootstrap.com/docs/4.1/getting-started/theming/
+
+Variables list available here :
+https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss
+*/
+
+// @import url("https://fonts.googleapis.com/css?family=Karla|Rubik:500");
+// $font-family-sans-serif: "Karla", Arial, sans-serif !default;
+// $headings-font-family: "Rubik", Arial, sans-serif !default;
+
+@import url("https://fonts.googleapis.com/css?family=Asap:400,600");
+$font-family-sans-serif: "Asap", Arial, sans-serif !default;
+$headings-font-family: "Asap", Arial, sans-serif !default;
+$headings-font-weight: 600 !default;
+
+$theme-colors: (
+  "primary": #15d18f,
+  "danger": #ff4136
+);
+
+/* Navbar */
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.navbar .dropdown-menu .form-control {
+  width: 200px;
+}
