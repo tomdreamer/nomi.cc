@@ -86,8 +86,6 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
         // req.flash() sends by the "connect-flash" npm package
         //(it's defined by the "connect-flash" npm package)
         req.flash("success", "Log in success!");
-        //email & password are CORRECT!
-        // HERE WE are missing something and it will come later
         res.redirect("/");
         })
       
@@ -96,10 +94,10 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
   })
   
 
-//   router.get("/logout", (req, res, next)=>{
-//     //req.logOut() is a Passport method that removes the USER ID from the session
-//     req.logOut();
-//     req.flash("success", "Logged out successfully! ");
-//     res.redirect("/");
-//   })
+  router.get("/logout", (req, res, next)=>{
+    //req.logOut() is a Passport method that removes the USER ID from the session
+    req.logOut();
+    req.flash("success", "Logged out successfully! ");
+    res.redirect("/");
+  })
   module.exports = router;
