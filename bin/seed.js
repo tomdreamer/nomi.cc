@@ -4,10 +4,12 @@ require("dotenv").config();
 // importing mongo stuff
 const mongoose = require("mongoose");
 const User = require("../models/user-model");
+const Furniture = require("../models/furniture-model");
 const bcrypt = require("bcrypt");
 
 // fake data
 const userData = require("./users.json");
+const furnitureData = require("./furnitures.json");
 
 mongoose
 	.connect("mongodb://localhost/nomi", {
@@ -61,7 +63,7 @@ User.create(admin1, admin2, function(e) {
 	if (e) {
 		throw e;
 	} else {
-		console.log(`${admin1.name} ${admin1.name} were created !💃`);
+		console.log(`${admin1.name} ${admin2.name} were created !💃`);
 	}
 });
 
@@ -73,10 +75,17 @@ User.create(userData)
 		console.log("Something went wrong...", err);
 	});
 
+Furniture.create(furnitureData)
+	.then(data => {
+		console.log("🔥", furnitureData.length, "Furnitures were added.");
+	})
+	.catch(err => {
+		console.log("Chairs are flying..something is wrong 💩", err);
+	});
+
 // TEMPLATES
 
 // USER
-
 // [
 //   '{{repeat(5, 7)}}',
 //   {
@@ -92,4 +101,26 @@ User.create(userData)
 //     role: '{{random("editor", "designer", "owner", "customer")}}',
 //     encryptedPassword: 'TOCHANGE'
 //   }
+// ]
+
+// FURNITURE
+// [
+// 	'{{repeat(50, 50)}}',
+// 	{
+// 		name: '{{company()}}',
+// 		serialNumber: '{{guid()}}',
+// 		type: '{{random("desk", "storage", "table", "lamp", "seating")}}',
+// 		description: '{{lorem(1, "paragraphs")}}',
+// 		size: {
+// 			width: '{{integer(4, 150)}}',
+// 			height: '{{integer(12, 255)}}',
+// 			depth: '{{integer(32, 128)}}'
+// 		},
+// 		stdPrice: '{{integer(199, 2500)}}',
+// 		pictures: {
+// 			url: ['https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1', 'https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2', 'https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3', 'https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4']
+// 		},
+// 		material: '{{random("wood", "copper", "steel", "fiber", "cloth")}}',
+// 		isActive: '{{bool()}}'
+// 	}
 // ]
