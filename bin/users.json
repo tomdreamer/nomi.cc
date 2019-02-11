@@ -1,0 +1,67 @@
+[
+  {
+    "name": "Decker",
+    "surname": "Walter",
+    "email": "deckerwalter@xerex.com",
+    "phoneNum": "+1 (871) 476-3584",
+    "description": "Ad ut qui laboris ut cupidatat ex aute enim laboris nisi tempor officia. Eiusmod irure laboris nisi consectetur ipsum id amet anim minim minim in duis eiusmod. Nisi cillum eu commodo laboris id. Magna ullamco excepteur exercitation incididunt aliquip proident magna elit nulla ad nisi.\r\nId aute non labore est ex sit incididunt aliquip. Consequat aute eu consectetur excepteur esse adipisicing qui in. Enim consequat Lorem dolore mollit deserunt dolore qui dolore fugiat laborum nisi ut aute duis. Ea deserunt ad Lorem commodo proident. Id reprehenderit nisi ad ut magna pariatur est non deserunt aliqua ad ea pariatur. Laborum deserunt dolor officia enim incididunt nulla irure sint consectetur dolor. Eiusmod id minim laborum incididunt qui officia ipsum velit non.\r\nSit velit dolor magna nisi commodo commodo ea. Aute voluptate tempor laborum laboris eiusmod. Cillum duis dolor cupidatat do incididunt culpa ipsum aliqua mollit do qui laborum labore. Aliqua consequat sint cillum do magna quis ex eiusmod.\r\n",
+    "picture": "https://dummyimage.com/600x600/dedede/ffffff.jpg&text=User+Pic+600%5E2",
+    "company": "Sybixtex",
+    "terms": false,
+    "isActive": false,
+    "role": "editor",
+    "encryptedPassword": "$2y$12$4X4pNjKDL0CGL/gI43WrSu9Dr6711QHzqK2pO4gaYDWsKpVyhLAs2"
+  },
+  {
+    "name": "Maria",
+    "surname": "Bass",
+    "email": "mariabass@sybixtex.com",
+    "phoneNum": "+1 (829) 421-3138",
+    "description": "Pariatur exercitation id nisi proident do tempor nostrud sunt. Minim adipisicing cillum consectetur velit anim esse quis sunt magna qui culpa officia tempor exercitation. Veniam adipisicing consequat do aute minim deserunt consectetur do enim.\r\nEa deserunt ullamco deserunt laboris adipisicing. Tempor laborum cillum elit dolor in aute ex qui voluptate et et nostrud ullamco aliquip. Consectetur esse pariatur officia et esse eu adipisicing voluptate sint dolor. Voluptate ea esse anim reprehenderit voluptate. Voluptate aliqua magna ut ut ut aliquip esse labore voluptate excepteur cupidatat irure.\r\nReprehenderit magna nostrud do nisi anim tempor dolor occaecat. Aliquip elit non mollit est proident adipisicing mollit sunt ullamco. Deserunt cupidatat ipsum adipisicing voluptate labore quis veniam incididunt nostrud dolor nostrud pariatur labore est.\r\n",
+    "picture": "https://dummyimage.com/600x600/dedede/ffffff.jpg&text=User+Pic+600%5E2",
+    "company": "Netplode",
+    "terms": true,
+    "isActive": true,
+    "role": "customer",
+    "encryptedPassword": "$2y$12$X0dkwb18G8C8hCqb8E65F.BnljL89N9R3agsnc7KtOce61MsLvjT"
+  },
+  {
+    "name": "Judith",
+    "surname": "Clayton",
+    "email": "judithclayton@netplode.com",
+    "phoneNum": "+1 (978) 424-3070",
+    "description": "Proident duis adipisicing est ex velit nostrud cupidatat excepteur et veniam ipsum consectetur quis irure. Duis amet proident ea elit adipisicing consequat occaecat. Ullamco cillum proident anim aliquip adipisicing deserunt nisi veniam eiusmod esse elit nostrud mollit. Do tempor qui excepteur occaecat cupidatat velit consectetur.\r\nMagna incididunt velit excepteur laboris. Esse fugiat proident sunt consectetur irure cupidatat elit ullamco magna nisi commodo minim. Reprehenderit pariatur consequat voluptate nulla aliqua eu non. Aliquip sint do voluptate do exercitation exercitation ad sint id voluptate ullamco non.\r\nMollit elit eu id magna deserunt cupidatat reprehenderit enim cupidatat. Mollit enim cupidatat fugiat enim ex labore incididunt velit aliqua est. Magna adipisicing ea nulla nisi nostrud.\r\n",
+    "picture": "https://dummyimage.com/600x600/dedede/ffffff.jpg&text=User+Pic+600%5E2",
+    "company": "Opportech",
+    "terms": true,
+    "isActive": false,
+    "role": "designer",
+    "encryptedPassword": "$2y$12$6gb9u3mVymvLL5ybx/76iuf7FU7L2FCLRmf00K7sXJOvI1PW8Jq0y"
+  },
+  {
+    "name": "Brooke",
+    "surname": "Holt",
+    "email": "brookeholt@opportech.com",
+    "phoneNum": "+1 (873) 406-2380",
+    "description": "Dolore qui velit officia laborum irure commodo. Occaecat occaecat fugiat tempor cupidatat. Minim et ipsum quis reprehenderit anim ad aliquip. Velit amet exercitation aliquip eiusmod aliqua minim veniam pariatur occaecat. Dolor eiusmod eu commodo occaecat. Do laboris nostrud exercitation sit qui ex aliquip incididunt id.\r\nSunt ut laborum fugiat consectetur cillum ad veniam commodo officia sunt irure. Anim culpa officia adipisicing sit cupidatat proident. Officia reprehenderit ad magna culpa pariatur magna cillum ullamco magna ullamco officia. Labore qui ut duis ea laborum. Excepteur proident exercitation pariatur ipsum anim ipsum est quis ex aliqua fugiat occaecat mollit.\r\nVeniam eu amet cupidatat officia dolore nostrud pariatur officia ad incididunt non. Anim deserunt excepteur amet cillum ex commodo labore aliquip veniam sunt. Occaecat consequat dolore velit esse enim est qui aliquip aute occaecat. Consequat pariatur cillum proident ut reprehenderit ipsum dolore commodo pariatur dolor. Enim ex ex mollit dolor sit nulla sint aliqua ut sint ut fugiat minim. Est irure velit laborum occaecat mollit duis culpa eu esse. Anim consectetur anim consequat cillum aliquip irure.\r\n",
+    "picture": "https://dummyimage.com/600x600/dedede/ffffff.jpg&text=User+Pic+600%5E2",
+    "company": "Geekosis",
+    "terms": false,
+    "isActive": false,
+    "role": "owner",
+    "encryptedPassword": "$2y$12$ei4sLQg9hSRXAvCGK9NvaOjMFL1G1ByLDhF1esA4bQEnlFwDJScDG"
+  },
+  {
+    "name": "Lloyd",
+    "surname": "Chan",
+    "email": "lloydchan@geekosis.com",
+    "phoneNum": "+1 (993) 524-2169",
+    "description": "Aute irure dolore labore in consectetur laborum aliqua minim anim nulla laborum. Nostrud nostrud eiusmod minim tempor cillum fugiat aliqua sint id duis. Qui laborum in sint nulla qui adipisicing eu pariatur ad esse sint Lorem ipsum. Velit labore non est nulla veniam incididunt tempor ut minim. Reprehenderit quis consequat anim fugiat laboris. Exercitation in deserunt cillum ullamco incididunt eiusmod esse proident occaecat ipsum dolor velit labore.\r\nEt qui tempor enim minim dolor voluptate reprehenderit. Veniam do do velit adipisicing sit amet velit. Non nostrud mollit duis dolor aute. Esse non pariatur ullamco adipisicing id. Veniam voluptate aliqua occaecat proident id laborum enim velit sint.\r\nQui in qui adipisicing fugiat sint culpa voluptate. Voluptate est nisi non elit aliquip velit laborum cupidatat esse nisi velit duis consectetur. Lorem duis occaecat tempor voluptate duis cillum labore pariatur quis incididunt aliquip sint mollit mollit. Quis laborum ullamco cillum excepteur officia cillum esse culpa ut commodo. Laborum consequat officia cupidatat magna fugiat esse nisi Lorem ut pariatur eu qui Lorem. Aute et ullamco quis mollit irure magna excepteur.\r\n",
+    "picture": "https://dummyimage.com/600x600/dedede/ffffff.jpg&text=User+Pic+600%5E2",
+    "company": "Valpreal",
+    "terms": true,
+    "isActive": true,
+    "role": "owner",
+    "encryptedPassword": "$2y$12$.GftDtgqNXK/VaeTZ9mqPeZp7CynaDgLg7uId.pTqzgwlFskzqD2G"
+  }
+]
