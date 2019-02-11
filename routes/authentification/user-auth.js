@@ -25,77 +25,77 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
 
      //enforce password rules (can't be empty and MUST have a digit)
      // ! = if it is empty
-    // if( !originalPassword || !originalPassword.match(/[0-9]/)){
-    //   // req.flash() sends by the "connect-flash" npm package
-    //   //(it's defined by the "connect-flash" npm package)
-    //   req.flash("error", "Password can't be blank and must contain a number");
-    //   res.redirect("/custumerSignup");
-    //   // use return to STOP the function here if the password is BAD
-    //   return;
-    // }
+    if( !originalPassword || !originalPassword.match(/[0-9]/)){
+      // req.flash() sends by the "connect-flash" npm package
+      //(it's defined by the "connect-flash" npm package)
+      req.flash("error", "Password can't be blank and must contain a number");
+      res.redirect("/custumerSignup");
+      // use return to STOP the function here if the password is BAD
+      return;
+    }
   
      User.create({email, encryptedPassword, name, surname, phoneNum, picture})
      .then(()=>{
       // req.flash() sends by the "connect-flash" npm package
       //(it's defined by the "connect-flash" npm package)
-      // req.flash("success", "Sign up success!");
+      req.flash("success", "Sign up success!");
        // redirect to the HOME PAGE if the sign up WORKED
        res.redirect("/");
      })
      .catch(err => next(err));
   });
 
-//   router.get("/login", (req,res, next)=>{
-//     res.render("auth-views/login-form.hbs");
-//   })
+ 
   
-//     router.post("/process-login", (req, res, next)=>{
-//     const {email, originalPassword} = req.body;
+    router.post("/process-logInCust", (req, res, next)=>{
+    const {email, originalPassword} = req.body;
   
-//     //Validate the email by searching in the database for an account with that email
-//     User.findOne({email :{$eq: email} })
-//     .then(userDoc => {
-//       // redirect to login page if result is NULL (no account with the email)
-//       if(!userDoc){
-//       // req.flash() sends by the "connect-flash" npm package
-//       //(it's defined by the "connect-flash" npm package)
-//       req.flash("error", "Email is incorrect!");
+    //Validate the email by searching in the database for an account with that email
+    User.findOne({email :{$eq: email} })
+    .then(userDoc => {
+      // redirect to login page if result is NULL (no account with the email)
+      if(!userDoc){
+      // req.flash() sends by the "connect-flash" npm package
+      //(it's defined by the "connect-flash" npm package)
+      // req.flash("error", "Email is incorrect!");
   
-//         res.redirect("/login");
-//         //usr ,return to stop the function here if the email is BAD
-//         return;
-//       }
-//       //validate the password by using bcrypt.compareSync()
-//       const {encryptedPassword} = userDoc;
+      router.get("/login", (req,res, next)=>{
+        res.render("auth-views/user-custumer-signUp-form.hbs");
+      })
+      }
+      //validate the password by using bcrypt.compareSync()
+      const {encryptedPassword} = userDoc;
   
-//       if(!bcryptjs.compareSync(originalPassword, encryptedPassword)){
-//         // req.flash() sends by the "connect-flash" npm package
-//         //(it's defined by the "connect-flash" npm package)
-//       req.flash("error", "Password is incorrect");
-//         // redirect to LOGIN PAGE fi the password don't match
-//         res.redirect("/login");
-//         // use return to STOP the function here if the PASSWORD is BAD
-//         return;
-//       }
-//       //email & password are CORRECT!
-//       //if we are MANUALLY managed the user session
-//       // req.session.userId = userDoc._id;
+      if(!bcrypt.compareSync(originalPassword, encryptedPassword)){
+        // req.flash() sends by the "connect-flash" npm package
+        //(it's defined by the "connect-flash" npm package)
+      //req.flash("error", "Password is incorrect");
+        // redirect to LOGIN PAGE fi the password don't match
+        router.get("/login", (req,res, next)=>{
+          res.render("auth-views/user-custumer-signUp-form.hbs");
+        })
+        // use return to STOP the function here if the PASSWORD is BAD
+        return;
+      }
+      //email & password are CORRECT!
+      //if we are MANUALLY managed the user session
+      // req.session.userId = userDoc._id;
   
-//       // instead we'll use PASSPORT - an npm package for managing user sessions
-//       // req.logIn() is a Passport method that calls serializeUser()
-//       // (that )
-//       req.logIn(userDoc, ()=>{
-//       // req.flash() sends by the "connect-flash" npm package
-//       //(it's defined by the "connect-flash" npm package)
-//       req.flash("success", "Log in success!");
-//       //email & password are CORRECT!
-//       // HERE WE are missing something and it will come later
-//       res.redirect("/");
-//       })
+      // instead we'll use PASSPORT - an npm package for managing user sessions
+      // req.logIn() is a Passport method that calls serializeUser()
+      // (that )
+      // req.logIn(userDoc, ()=>{
+      // req.flash() sends by the "connect-flash" npm package
+      //(it's defined by the "connect-flash" npm package)
+      //req.flash("success", "Log in success!");
+      //email & password are CORRECT!
+      // HERE WE are missing something and it will come later
+      res.redirect("/");
+      // })
       
-//     })
-//     .catch(err => next(err));
-//   })
+    })
+    .catch(err => next(err));
+  })
   
 
 //   router.get("/logout", (req, res, next)=>{
