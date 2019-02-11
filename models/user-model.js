@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
+// const Address = require("../models/address-model.js")
+
 const userSchema = new Schema({
 	name: {
 		type: String,
@@ -19,7 +21,7 @@ const userSchema = new Schema({
 		type: String,
 		required: true,
 		unique: true,
-		match: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+		// match: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 		// https://stackoverflow.com/a/46181/3468846
 		minlength: 5,
 		maxlength: 254
@@ -37,16 +39,18 @@ const userSchema = new Schema({
 		minlength: 600,
 		maxlength: 1200
 	},
+	//PB avec le match: a traiter
 	picture: {
 		type: String,
-		match: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/,
+//	match: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/,
 		// https://stackoverflow.com/a/3809435/3468846
 	},
 	company: {
 		type: String,
 		maxlength: 64
 	},
-	addresses: [Address.schema],
+	//Ne fonctionne pas pour le moment... A revoir
+	// addresses: [Address],
 	// https://stackoverflow.com/a/22714554/3468846
 
 	terms: {
