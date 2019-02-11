@@ -4,13 +4,13 @@ const Schema = mongoose.Schema;
 
 const addressSchema = new Schema({
 
-	streetNumber: {
+	streetAdress: {
 		type: String,
 		required: true,
 		minlength: 1,
 		maxlength: 32
 	},
-	streetName: {
+	city: {
 		type: String,
 		required: true,
 	},
@@ -22,7 +22,10 @@ const addressSchema = new Schema({
 		required: true,
 		minlength: 2,
 		maxlength: 11
-	}
+	},
+	country: {
+		type: String,
+	},
 });
 
 const Address = mongoose.model("Address", addressSchema);

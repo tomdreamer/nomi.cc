@@ -24,7 +24,7 @@ const userSchema = new Schema({
 		minlength: 5,
 		maxlength: 254
 	},
-	phone: {
+	phoneNum: {
 		type: String,
 		match: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 		minlength: 3,
