@@ -13,6 +13,8 @@ const session      	= require('express-session');
 const MongoStore   	= require('connect-mongo')(session); 
 const passport     	= require('passport');
 
+require("./config/passport-setup");
+
 mongoose
 	.connect("mongodb://localhost/nomi", { useNewUrlParser: true })
 	.then(x => {
@@ -61,7 +63,7 @@ app.use(
   saveUninitialized: true,
   resave: true,
   //secret should be a string  that's different for every app
-  secret: "ca^khT8KYd,G73C7R9(;^atb?h>FTWdbn4pqEFUKs3",
+  secret: process.env.PASSPORT_SECRET,
   // store session data inside our MongoDB with the "connect-mongo" package
   store: new MongoStore({mongooseConnection: mongoose.connection}),
 })
@@ -89,11 +91,12 @@ app.use((req, res, next)=>{
 });
 
 // default value for title local
-app.locals.title = "Express - Generated with IronGenerator";
+app.locals.title = "Express users";
 
 const index = require("./routes/index");
 app.use("/", index);
 
 const auth = require("./routes/authentification/user-auth");
 app.use("/", auth);
+
 module.exports = app;
