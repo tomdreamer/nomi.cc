@@ -45,7 +45,9 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
      .catch(err => next(err));
   });
 
- 
+  router.get("/login", (req,res, next)=>{
+    res.render("auth-views/user-custumer-logIn-form.hbs");
+  })
   
     router.post("/process-logInCust", (req, res, next)=>{
     const {email, originalPassword} = req.body;
@@ -57,11 +59,9 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
       if(!userDoc){
       // req.flash() sends by the "connect-flash" npm package
       //(it's defined by the "connect-flash" npm package)
-      // req.flash("error", "Email is incorrect!");
+      req.flash("error", "Email is incorrect!");
   
-      router.get("/login", (req,res, next)=>{
-        res.render("auth-views/user-custumer-signUp-form.hbs");
-      })
+      res.redirect("/login");
       }
       //validate the password by using bcrypt.compareSync()
       const {encryptedPassword} = userDoc;
@@ -69,29 +69,27 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
       if(!bcrypt.compareSync(originalPassword, encryptedPassword)){
         // req.flash() sends by the "connect-flash" npm package
         //(it's defined by the "connect-flash" npm package)
-      //req.flash("error", "Password is incorrect");
+      req.flash("error", "Password is incorrect");
         // redirect to LOGIN PAGE fi the password don't match
-        router.get("/login", (req,res, next)=>{
-          res.render("auth-views/user-custumer-signUp-form.hbs");
-        })
+        res.redirect("/login");
         // use return to STOP the function here if the PASSWORD is BAD
         return;
       }
       //email & password are CORRECT!
-      //if we are MANUALLY managed the user session
+      // if we are MANUALLY managed the user session
       // req.session.userId = userDoc._id;
   
       // instead we'll use PASSPORT - an npm package for managing user sessions
       // req.logIn() is a Passport method that calls serializeUser()
       // (that )
-      // req.logIn(userDoc, ()=>{
-      // req.flash() sends by the "connect-flash" npm package
-      //(it's defined by the "connect-flash" npm package)
-      //req.flash("success", "Log in success!");
-      //email & password are CORRECT!
-      // HERE WE are missing something and it will come later
-      res.redirect("/");
-      // })
+      req.logIn(userDoc, ()=>{
+        // req.flash() sends by the "connect-flash" npm package
+        //(it's defined by the "connect-flash" npm package)
+        req.flash("success", "Log in success!");
+        //email & password are CORRECT!
+        // HERE WE are missing something and it will come later
+        res.redirect("/");
+        })
       
     })
     .catch(err => next(err));
