@@ -6,6 +6,7 @@ document.addEventListener(
 	false
 );
 
+// Dynamic footer that stiks to the bottom of the page
 function setFooterStyle() {
 	var docHeight = $(window).height();
 	var footerHeight = $("footer").outerHeight();
