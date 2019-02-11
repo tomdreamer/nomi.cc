@@ -21,6 +21,8 @@ router.get("/furnitures", (req, res, next) => {
 			res.locals.isActive = {
 				furnitureIndex: true
 			};
+			res.locals.isShopping = true;
+
 			res.render("./furniture/index");
 		})
 		// catch next(err) skip straight to error
@@ -29,19 +31,33 @@ router.get("/furnitures", (req, res, next) => {
 
 /* Furniture Show */
 router.get("/furnitures/:furnitureId", (req, res, next) => {
-	//res.send(req.params); as raw data
-	// res.json(req.params); as json file
-
-	// get the id inside of params object (destructurate)
 	const { furnitureId } = req.params;
 
 	Furniture.findById(furnitureId)
 		.then(queryResult => {
 			res.locals.furnitureItem = queryResult;
+			res.locals.isShopping = true;
 			res.render("./furniture/show");
 		})
 
-		// catch next(err) skip straight to error
+		.catch(err => next(err));
+});
+
+/* Furniture Show by Type */
+router.get("/furnitures/category/:stringType", (req, res, next) => {
+	const { stringType } = req.params;
+	Furniture.find({
+		type: stringType,
+		isActive: true
+	})
+		.limit(10)
+		.sort({ name: -1 })
+		.then(queryResult => {
+			res.locals.furnitureArray = queryResult;
+			res.locals.isShopping = true;
+			res.render("./furniture/index");
+		})
+
 		.catch(err => next(err));
 });
 

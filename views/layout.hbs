@@ -23,8 +23,13 @@
 <body>
 
 	{{> layout_navbar}}
+
+	{{#if isShopping}}
+	{{> layout_navbar_furniture}}
+	{{/if}}
+
 	<section class="main">
-		<div class="container py-4 h-100">
+		<div class="container py-4">
 			{{{body}}}
 		</div>
 	</section>
