@@ -1,0 +1,74 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="col-sm-12 mb-2">
+			<div class="row">
+				<div class="col-md-12 p-5 bg-light border shadow-sm">
+					<h4>Submit a Design <small class="text-muted"></small> </h4>
+					<p> Pommy ipsum ever so lovely lass lad atrocious wellies old girl odds and sods, Union Jack a bottle of plonk
+						a bit wonky
+						jellied eels chav stiff upper lip make a brew. Atrocious I bid you good day bag egg's old boy Dr. Watson
+						fancy a cuppa</p>
+					<hr>
+
+					<form action="/furnitures/new" method="POST">
+						<div class="form-row">
+
+							<div class="col my-2">
+								<input type="text" name="name" class="form-control" placeholder="Design title *" minlength="3"
+									maxlength="64" required>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="col my-2">
+								<input type="number" name="width" class="form-control" placeholder="Width (centimeters) *" min="1"
+									max="5000" required>
+							</div>
+
+							<div class="col my-2">
+								<input type="number" name="height" class="form-control" placeholder="Height (centimeters) *" min="1"
+									max="5000" required>
+							</div>
+
+							<div class="col my-2">
+								<input type="number" name="depth" class="form-control" placeholder="Depth (centimeters) *" min="1"
+									max="5000" required>
+							</div>
+
+						</div>
+
+						<div class="form-row">
+							<div class="col my-2">
+								<textarea type="text" name="description" class="form-control" rows="3"
+									placeholder="Description * "></textarea>
+							</div>
+
+							<div class="col-sm-3 my-2 text-muted text-center">
+								<select multiple class="form-control" id="exampleFormControlSelect2">
+									<option>Copper</option>
+									<option>Cloth</option>
+									<option>Fiber</option>
+									<option>Iron</option>
+									<option>Wood</option>
+								</select>
+
+							</div>
+
+						</div>
+
+						<div class="col-sm-12 my-2">
+							<input type="file" class="custom-file-input btn-default" id="inputGroupFile01">
+							<label class="custom-file-label" for="inputGroupFile01"> <i class="fa fa-file-pdf-o pr-1"
+									aria-hidden="true"></i> <small class="text-muted"> Porfolio</small></label>
+						</div>
+						<hr>
+
+						<button class="btn btn-success btn mt-2">Submit</button>
+
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

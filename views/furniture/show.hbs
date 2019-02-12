@@ -1,0 +1,118 @@
+{{#with furnitureItem}}
+<div class="bg-light pb-4 p-3">
+	<div class="row">
+		<!-- Product Gallery-->
+		<div class="col-md-6 mb-30">
+			<div class="product-gallery"><span class="product-badge text-danger">Sale</span>
+				<div class="product-carousel owl-carousel gallery-wrapper owl-loaded owl-drag" data-pswp-uid="1">
+					<div class="owl-stage-outer">
+						<div class="owl-stage"
+							style="transform: translate3d(0px, 0px, 0px); transition: all 0s ease 0s; width: 2220px;">
+							<div class="owl-item active" style="width: 555px;">
+								<div class="gallery-item" data-hash="one"><a href="img/shop/single/01.jpg" data-size="555x480"><img
+											src="img/shop/single/01.jpg" alt="Product"></a></div>
+							</div>
+							<div class="owl-item" style="width: 555px;">
+								<div class="gallery-item" data-hash="two"><a href="img/shop/single/02.jpg" data-size="555x480"><img
+											src="img/shop/single/02.jpg" alt="Product"></a></div>
+							</div>
+							<div class="owl-item" style="width: 555px;">
+								<div class="gallery-item" data-hash="three"><a href="img/shop/single/03.jpg" data-size="555x480"><img
+											src="img/shop/single/03.jpg" alt="Product"></a></div>
+							</div>
+							<div class="owl-item" style="width: 555px;">
+								<div class="gallery-item" data-hash="four"><a href="img/shop/single/04.jpg" data-size="555x480"><img
+											src="img/shop/single/04.jpg" alt="Product"></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="owl-nav disabled">
+						<div class="owl-prev">prev</div>
+						<div class="owl-next">next</div>
+					</div>
+					<div class="owl-dots disabled"></div>
+				</div>
+				<ul class="product-thumbnails">
+					<li class="active"><a href="#one"><img src="img/shop/single/th01.jpg" alt="Product"></a></li>
+					<li><a href="#two"><img src="img/shop/single/th02.jpg" alt="Product"></a></li>
+					<li><a href="#three"><img src="img/shop/single/th03.jpg" alt="Product"></a></li>
+					<li><a href="#four"><img src="img/shop/single/th04.jpg" alt="Product"></a></li>
+				</ul>
+			</div>
+		</div>
+		<!-- Product Info-->
+		<div class="col-md-6 mb-30">
+			<div class="card border-default bg-white pt-2 shadow-sm">
+				<div class="card-body">
+					<h2 class="mb-3">{{this.name}}</h2>
+					<h3 class="text-normal"> ${{this.stdPrice}}.00</h3>
+					<p class="text-sm text-muted">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+						praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati
+						cupiditate non provident.</p>
+					<div class="row">
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="sp-color">Color:</label>
+								<select class="form-control" id="sp-color">
+									<option>Light Gray</option>
+									<option>Charcoal</option>
+									<option selected="">Aqua</option>
+									<option>Orange</option>
+									<option>Navi</option>
+									<option>Yellow</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<div class="form-group">
+								<label for="sp-accent-color">Accent Color:</label>
+								<select class="form-control" id="sp-accent-color">
+									<option selected="">White</option>
+									<option>Light Gray</option>
+									<option>Black</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<div class="row align-items-end mb-4">
+						<div class="col-sm-4">
+							<div class="form-group mb-0">
+								<label for="sp-quantity">Quantity:</label>
+								<select class="form-control" id="sp-quantity">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>5</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-sm-8">
+							<div class="pt-4 hidden-sm-up"></div>
+							<button class="btn btn-primary btn-block my-0">Add To Cart</button>
+						</div>
+					</div>
+					<ul class="list-unstyled text-sm mb-4">
+						<li><span class="text-dark text-medium">SKU:</span> #994587623</li>
+						<li><span class="text-dark text-medium">Categories:</span> <a href="#" class="navi-link">Furniture</a>, <a
+								href="#" class="navi-link">File Cabinets</a></li>
+					</ul>
+					<div class="d-flex flex-wrap justify-content-between align-items-center"><a
+							class="btn btn-outline-secondary btn-sm text-danger" href="#"><i
+								class="material-icons favorite_border"></i>&nbsp;Save To Wishlist</a>
+						<div class="py-2"><span class="d-inline-block align-middle text-sm text-muted mr-2">Share:</span><a
+								class="social-button shape-rounded sb-facebook" href="#" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Facebook"><i class="socicon-facebook"></i></a><a
+								class="social-button shape-rounded sb-twitter" href="#" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Twitter"><i class="socicon-twitter"></i></a><a
+								class="social-button shape-rounded sb-instagram" href="#" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Instagram"><i class="socicon-instagram"></i></a><a
+								class="social-button shape-rounded sb-google-plus" href="#" data-toggle="tooltip" data-placement="top"
+								title="" data-original-title="Google +"><i class="socicon-googleplus"></i></a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{{/with}}

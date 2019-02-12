@@ -1,0 +1,1102 @@
+[
+  {
+    "name": "Exoplode",
+    "serialNumber": "7bdb8168-c0af-4a0b-904b-9c6e474a053b",
+    "type": "table",
+    "description": "Eu irure proident ipsum enim veniam ex non id cupidatat. Incididunt irure ad amet ipsum laborum sint commodo magna. Ad aute qui quis eiusmod commodo aliqua laboris et enim mollit ex laborum sit. Ullamco Lorem laboris amet aliqua non sint nisi fugiat ullamco sint nostrud ipsum veniam sunt. Nisi sunt occaecat qui consequat. Veniam voluptate ullamco aute deserunt cillum enim aliquip consequat incididunt ut.\r\n",
+    "size": {
+      "width": 48,
+      "height": 202,
+      "depth": 102
+    },
+    "stdPrice": 1410,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Exoplode+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Exoplode+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Exoplode+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Exoplode+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": false
+  },
+  {
+    "name": "Bisba",
+    "serialNumber": "8862cec8-945e-4e40-9e5d-9e05082d0032",
+    "type": "desk",
+    "description": "Veniam quis velit dolore dolor eiusmod excepteur ex occaecat mollit. Voluptate nisi labore veniam qui veniam cillum nulla excepteur labore. Quis sunt cillum esse labore labore deserunt ad laboris est. Magna adipisicing deserunt laboris nulla. Consequat irure ullamco pariatur elit velit labore non laboris non.\r\n",
+    "size": {
+      "width": 26,
+      "height": 71,
+      "depth": 100
+    },
+    "stdPrice": 1593,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Bisba+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Bisba+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Bisba+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Bisba+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": true
+  },
+  {
+    "name": "Miracula",
+    "serialNumber": "f06c20f0-c221-4128-956b-aa2311cdbd84",
+    "type": "desk",
+    "description": "Excepteur culpa pariatur irure amet nostrud ipsum cupidatat aliqua. Velit adipisicing minim Lorem ex exercitation nostrud ea aliquip ipsum magna pariatur eu. Aliquip eiusmod adipisicing ut sint adipisicing enim officia. Dolore pariatur laborum reprehenderit minim occaecat aliquip incididunt culpa magna.\r\n",
+    "size": {
+      "width": 69,
+      "height": 165,
+      "depth": 60
+    },
+    "stdPrice": 1313,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Bisba+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Bisba+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Bisba+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Bisba+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": true
+  },
+  {
+    "name": "Otherway",
+    "serialNumber": "518bd805-4572-4c99-88af-9e90c39a7115",
+    "type": "desk",
+    "description": "Id ipsum eiusmod velit adipisicing et magna. Aute ad laborum eiusmod duis culpa anim sunt pariatur ea ex sit. Aute magna minim do velit ad exercitation laboris velit quis fugiat non mollit enim. Duis laborum nulla excepteur nostrud nisi. Eiusmod ea velit aliqua anim minim esse mollit elit veniam ut. Aute reprehenderit sit quis excepteur reprehenderit. Minim non mollit consequat ullamco dolore irure incididunt velit exercitation do laboris.\r\n",
+    "size": {
+      "width": 18,
+      "height": 219,
+      "depth": 41
+    },
+    "stdPrice": 2377,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Otherway+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Otherway+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Otherway+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Otherway+4"
+      ]
+    },
+    "material": "fiber",
+    "isActive": true
+  },
+  {
+    "name": "Geekol",
+    "serialNumber": "e7b572cc-dedc-4ee3-a066-9ca7d220d9d9",
+    "type": "storage",
+    "description": "Excepteur incididunt ullamco laborum sint qui ex minim proident duis non mollit ex. Cillum ea id ipsum sit veniam sint dolore ut. Nostrud est deserunt proident cupidatat quis laborum ut exercitation. Velit ex reprehenderit est ea nulla dolor tempor dolor mollit duis sit occaecat. Nostrud sint enim amet Lorem ipsum in ad adipisicing nisi. Dolor aliquip nostrud exercitation excepteur exercitation dolore fugiat ex nostrud adipisicing sunt.\r\n",
+    "size": {
+      "width": 6,
+      "height": 238,
+      "depth": 36
+    },
+    "stdPrice": 638,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Geekol+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Geekol+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Geekol+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Geekol+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Lexicondo",
+    "serialNumber": "f9560b2a-a3e0-4eeb-8e24-8308681093a0",
+    "type": "seating",
+    "description": "Ea non mollit elit esse consequat ex sunt enim aliqua laborum mollit labore aliquip. Velit magna labore adipisicing cupidatat veniam voluptate in aliqua esse ea esse enim ipsum. Occaecat tempor Lorem eiusmod exercitation duis. Sit reprehenderit adipisicing mollit cupidatat reprehenderit irure laborum amet et. Voluptate nostrud nostrud duis ad. Incididunt excepteur est ut tempor consectetur tempor.\r\n",
+    "size": {
+      "width": 42,
+      "height": 159,
+      "depth": 96
+    },
+    "stdPrice": 1370,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Lexicondo+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Lexicondo+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Lexicondo+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Lexicondo+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Datagene",
+    "serialNumber": "4bf7a1c5-a235-461d-9344-2b5971ac90c3",
+    "type": "desk",
+    "description": "Ullamco mollit qui excepteur aliquip laboris non amet nulla est nulla. Commodo veniam amet reprehenderit anim proident. Dolor aute veniam sit minim ea incididunt sunt.\r\n",
+    "size": {
+      "width": 25,
+      "height": 32,
+      "depth": 73
+    },
+    "stdPrice": 2232,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Datagene+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Datagene+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Datagene+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Datagene+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": false
+  },
+  {
+    "name": "Xixan",
+    "serialNumber": "f6142b62-97a9-4cf8-8916-9ee8bfa3cd72",
+    "type": "desk",
+    "description": "Sint cillum magna aliqua in non. Deserunt dolore esse eiusmod aute exercitation aliquip occaecat. Mollit incididunt nisi minim ea eiusmod incididunt dolor dolor consequat ea. Anim quis eu sint enim nostrud excepteur id reprehenderit voluptate veniam amet laboris id sint.\r\n",
+    "size": {
+      "width": 74,
+      "height": 223,
+      "depth": 124
+    },
+    "stdPrice": 2051,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Xixan+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Xixan+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Xixan+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Xixan+4"
+      ]
+    },
+    "material": "fiber",
+    "isActive": true
+  },
+  {
+    "name": "Quarmony",
+    "serialNumber": "fb4f37f3-a039-46d0-8a06-743a510b2c61",
+    "type": "desk",
+    "description": "Nisi aliqua id ullamco eu non officia magna. Consequat labore commodo proident laboris dolore sit cillum est. Culpa amet esse ad occaecat aute quis tempor irure pariatur ullamco commodo cillum. Ipsum esse Lorem mollit quis officia elit quis. Laborum Lorem aliqua ut esse qui. Ad ipsum labore sit mollit sunt in elit proident ad nulla consectetur dolore esse.\r\n",
+    "size": {
+      "width": 124,
+      "height": 94,
+      "depth": 40
+    },
+    "stdPrice": 2335,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Quarmony+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Quarmony+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Quarmony+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Quarmony+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Oulu",
+    "serialNumber": "d8cc6e0d-2dba-4950-b804-0800eeac528c",
+    "type": "lamp",
+    "description": "Mollit aute in quis aute ad consequat exercitation consectetur aute. Sint aute labore exercitation deserunt ullamco. Ea veniam fugiat consequat non irure dolore veniam reprehenderit fugiat incididunt sint. Esse ipsum elit exercitation deserunt qui nisi qui. Amet excepteur ipsum ad magna laborum velit magna voluptate elit.\r\n",
+    "size": {
+      "width": 26,
+      "height": 70,
+      "depth": 92
+    },
+    "stdPrice": 804,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Oulu+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Oulu+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Oulu+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Oulu+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Pheast",
+    "serialNumber": "826fc686-5934-4292-b5b9-4689c8ed597d",
+    "type": "table",
+    "description": "Sit nulla Lorem cillum et consectetur elit dolore eu id ipsum. Minim quis do quis commodo incididunt ea et consequat nisi duis culpa aliqua. Labore reprehenderit minim incididunt sunt qui non minim.\r\n",
+    "size": {
+      "width": 124,
+      "height": 184,
+      "depth": 70
+    },
+    "stdPrice": 335,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Pheast+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Pheast+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Pheast+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Pheast+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Tetak",
+    "serialNumber": "b16addcb-c7dd-4ab0-b429-d2bc000e6005",
+    "type": "table",
+    "description": "Dolor cupidatat fugiat voluptate nulla excepteur reprehenderit aliqua anim magna deserunt anim commodo sit. Ex sint commodo id Lorem occaecat veniam culpa nisi labore. Esse magna in sint sunt incididunt exercitation ea eiusmod exercitation amet ullamco reprehenderit ipsum. Dolor sunt laboris non proident aute laboris labore. Veniam sunt incididunt velit mollit minim sit aliquip eu. Ipsum mollit magna anim sunt consectetur in proident. Culpa dolore nulla sit dolor minim sint velit tempor eu esse eu sint mollit magna.\r\n",
+    "size": {
+      "width": 95,
+      "height": 41,
+      "depth": 120
+    },
+    "stdPrice": 1801,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Tetak+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Tetak+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Tetak+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Tetak+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Codact",
+    "serialNumber": "a820c3ee-8652-409d-90fb-edafaf5fe7cd",
+    "type": "lamp",
+    "description": "Officia ea voluptate veniam aliqua labore sint ipsum pariatur nostrud labore aliqua culpa exercitation exercitation. Nostrud sunt ea aute proident esse labore ad aliqua. Ut sint magna velit duis magna exercitation consequat sunt non pariatur elit sint duis nulla. Excepteur in nisi anim ea eiusmod Lorem aliqua enim.\r\n",
+    "size": {
+      "width": 114,
+      "height": 33,
+      "depth": 110
+    },
+    "stdPrice": 1982,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Codact+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": false
+  },
+  {
+    "name": "Digifad",
+    "serialNumber": "ae1949b5-aa70-478c-ab72-d1aa44e85877",
+    "type": "table",
+    "description": "Voluptate reprehenderit dolore culpa irure. Minim nostrud nostrud cupidatat dolore laboris irure ut. Voluptate magna nulla anim ut ad nulla laboris Lorem elit qui sunt. Quis elit sit est commodo occaecat. Lorem consequat nostrud consequat in duis irure velit incididunt aute aliquip laborum aliqua id. Lorem nulla commodo ea do nostrud voluptate veniam voluptate. Magna voluptate mollit ullamco cillum Lorem reprehenderit mollit deserunt voluptate duis.\r\n",
+    "size": {
+      "width": 101,
+      "height": 221,
+      "depth": 115
+    },
+    "stdPrice": 2062,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Codact+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Codact+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Codact+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Codact+4"
+      ]
+    },
+    "material": "fiber",
+    "isActive": false
+  },
+  {
+    "name": "Opticom",
+    "serialNumber": "7c656570-53e0-4208-bacf-863726263e58",
+    "type": "seating",
+    "description": "Mollit labore qui elit eu sunt. Dolor ipsum incididunt ullamco est. Enim mollit occaecat tempor pariatur dolore proident proident cupidatat magna. Eu excepteur velit esse nostrud voluptate magna minim. Quis do mollit labore do ad enim minim esse et magna aute. Culpa ex ipsum consequat do nulla commodo sunt veniam.\r\n",
+    "size": {
+      "width": 89,
+      "height": 236,
+      "depth": 77
+    },
+    "stdPrice": 1114,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Opticom+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Opticom+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Opticom+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Opticom+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": false
+  },
+  {
+    "name": "Quordate",
+    "serialNumber": "58368b31-1d60-491e-b1d2-0b01563c9eb5",
+    "type": "lamp",
+    "description": "Adipisicing cillum proident nisi enim dolor non incididunt. In amet ut laboris amet do do. Non reprehenderit mollit duis consectetur laboris ea eiusmod in id esse laborum irure. Minim eiusmod velit aliquip magna cillum pariatur ut sit. Qui excepteur officia voluptate exercitation magna commodo qui voluptate minim qui mollit.\r\n",
+    "size": {
+      "width": 91,
+      "height": 53,
+      "depth": 94
+    },
+    "stdPrice": 1511,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Quordate+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Quordate+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Quordate+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Quordate+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Poshome",
+    "serialNumber": "0db6a420-75ae-4906-8d83-2c4353087f54",
+    "type": "lamp",
+    "description": "Amet aliquip excepteur culpa culpa fugiat laborum dolore Lorem consectetur officia ut cillum sunt. Magna velit aliquip sit Lorem est ad aliqua ullamco excepteur. Do et dolore adipisicing minim et nisi ea veniam deserunt excepteur occaecat esse. Sint voluptate aliqua nisi deserunt. Magna aute officia Lorem et nulla cillum.\r\n",
+    "size": {
+      "width": 89,
+      "height": 159,
+      "depth": 51
+    },
+    "stdPrice": 345,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Poshome+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Poshome+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Poshome+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Poshome+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Liquicom",
+    "serialNumber": "a927a7cd-9020-4542-b9cf-29251a4d896d",
+    "type": "desk",
+    "description": "Culpa proident aute excepteur aliquip pariatur. Voluptate commodo ex ea eiusmod cillum non ullamco occaecat deserunt. Velit anim ea in irure. Eu mollit cillum laborum exercitation. Amet ut cupidatat culpa officia laboris. Adipisicing id mollit deserunt dolor aute proident sunt laborum consectetur cillum voluptate velit aliqua. Exercitation minim amet amet ipsum eiusmod ipsum ipsum.\r\n",
+    "size": {
+      "width": 88,
+      "height": 102,
+      "depth": 63
+    },
+    "stdPrice": 1737,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Liquicom+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Liquicom+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Liquicom+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Liquicom+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": false
+  },
+  {
+    "name": "Atomica",
+    "serialNumber": "ab4f5fb0-7f59-42d9-ba6b-1ccb8fd79324",
+    "type": "seating",
+    "description": "Ea ea ullamco deserunt non velit. Deserunt dolor proident sit occaecat irure dolore exercitation ad non. Fugiat aute et aliquip aute enim mollit consectetur ad qui qui qui ad et. Lorem ut sit incididunt cupidatat consectetur laborum do. Aute ut et nostrud magna esse minim velit dolor eiusmod nulla est ipsum irure voluptate. Et cillum consectetur cillum tempor minim.\r\n",
+    "size": {
+      "width": 101,
+      "height": 144,
+      "depth": 119
+    },
+    "stdPrice": 1153,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Atomica+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Atomica+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Atomica+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Atomica+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Arctiq",
+    "serialNumber": "f6e7acdc-2e96-4473-860e-519b781d09ca",
+    "type": "desk",
+    "description": "Voluptate occaecat minim excepteur minim aute Lorem non fugiat sit eiusmod proident duis nostrud. Ea culpa aute eiusmod qui est nostrud ullamco minim. Est adipisicing deserunt esse aliqua velit ea in ullamco laborum. Et est aliqua dolor sit nostrud consectetur officia ipsum aute. Eiusmod in sint pariatur sunt consectetur sunt voluptate qui voluptate labore adipisicing officia. Culpa id laborum dolore consectetur dolor consequat elit. Cillum pariatur est minim ut incididunt Lorem ex Lorem.\r\n",
+    "size": {
+      "width": 85,
+      "height": 85,
+      "depth": 127
+    },
+    "stdPrice": 820,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Arctiq+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Arctiq+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Arctiq+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Arctiq+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": false
+  },
+  {
+    "name": "Zytrex",
+    "serialNumber": "58877827-f612-4174-b87c-f488f7e2af39",
+    "type": "desk",
+    "description": "Et cillum veniam pariatur id duis aliquip do est veniam excepteur ea dolor id. Duis voluptate consequat pariatur consequat consectetur officia laborum eu nulla do ut est aliqua ea. Laborum quis quis ea cupidatat tempor nulla deserunt.\r\n",
+    "size": {
+      "width": 142,
+      "height": 140,
+      "depth": 99
+    },
+    "stdPrice": 494,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Zytrex+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Zytrex+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Zytrex+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Zytrex+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Applidec",
+    "serialNumber": "d8bffeb1-21c7-4947-9435-89c23d039664",
+    "type": "storage",
+    "description": "Dolore non aliqua laborum dolor dolor ullamco consequat do ipsum fugiat irure enim quis. Est aliqua voluptate elit veniam tempor id pariatur ex eiusmod voluptate adipisicing. Aliqua aute exercitation pariatur labore aute cillum amet Lorem sunt amet. Incididunt ullamco culpa anim tempor laboris deserunt incididunt cillum voluptate reprehenderit irure aliquip sit voluptate. Id consectetur non deserunt pariatur qui magna voluptate ut sint. Adipisicing minim proident voluptate aliqua amet mollit consequat anim labore ea ad est.\r\n",
+    "size": {
+      "width": 147,
+      "height": 230,
+      "depth": 40
+    },
+    "stdPrice": 1979,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Applidec+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Applidec+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Applidec+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Applidec+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Phormula",
+    "serialNumber": "810d5f3e-71da-417d-9ed6-558bb5f92cd6",
+    "type": "desk",
+    "description": "Occaecat proident Lorem cillum ipsum nisi quis elit cillum non cillum irure irure adipisicing. Ut est nulla labore pariatur. Laborum culpa cupidatat sint magna esse occaecat et ad id enim occaecat ex adipisicing reprehenderit.\r\n",
+    "size": {
+      "width": 106,
+      "height": 167,
+      "depth": 62
+    },
+    "stdPrice": 1802,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Phormula+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Phormula+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Phormula+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Phormula+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": false
+  },
+  {
+    "name": "Pasturia",
+    "serialNumber": "652489a0-24c1-4914-b4a7-3258c464b363",
+    "type": "storage",
+    "description": "Ut nulla tempor dolor deserunt incididunt. Ad laborum anim labore cillum cupidatat ad consequat nisi pariatur. Anim voluptate occaecat excepteur irure sint consectetur qui cillum laborum. Sunt laborum mollit fugiat exercitation qui. Cillum ipsum velit magna id in laboris consectetur. Sunt sunt nisi excepteur sint aliquip enim non fugiat nisi sint commodo voluptate.\r\n",
+    "size": {
+      "width": 23,
+      "height": 65,
+      "depth": 108
+    },
+    "stdPrice": 2208,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Pasturia+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Pasturia+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Pasturia+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Pasturia+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Diginetic",
+    "serialNumber": "06f3cd58-f76f-4936-af18-c4b1ad62a613",
+    "type": "seating",
+    "description": "Ut pariatur ipsum cillum voluptate pariatur enim elit excepteur eiusmod. Excepteur dolor commodo ex cillum veniam. Nisi in commodo cillum pariatur in.\r\n",
+    "size": {
+      "width": 124,
+      "height": 163,
+      "depth": 39
+    },
+    "stdPrice": 1170,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Diginetic+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Diginetic+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Diginetic+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Diginetic+4"
+      ]
+    },
+    "material": "fiber",
+    "isActive": false
+  },
+  {
+    "name": "Jamnation",
+    "serialNumber": "9d70f152-7feb-475c-8529-bd4630ef6154",
+    "type": "seating",
+    "description": "Mollit ex culpa aute voluptate voluptate eu tempor ea laboris. Amet in duis labore ex. In enim ad sunt aute amet. Duis ipsum aute laborum cillum aliqua velit ut Lorem fugiat enim.\r\n",
+    "size": {
+      "width": 6,
+      "height": 87,
+      "depth": 71
+    },
+    "stdPrice": 1738,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Jamnation+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Jamnation+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Jamnation+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Jamnation+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Hotcakes",
+    "serialNumber": "6eb9b831-99b0-4961-9d10-9afd63114006",
+    "type": "lamp",
+    "description": "Ad mollit sint dolor aliquip mollit deserunt enim incididunt laborum. Laborum mollit do officia tempor proident. Sit velit aute deserunt ea laboris Lorem exercitation dolore aliqua voluptate id. Aliquip sit reprehenderit enim do ex reprehenderit tempor. Nostrud ullamco ea consequat velit eiusmod consequat dolor aliqua dolor sit. Cupidatat sit ullamco elit Lorem magna sunt sint veniam nostrud est eu.\r\n",
+    "size": {
+      "width": 43,
+      "height": 43,
+      "depth": 122
+    },
+    "stdPrice": 928,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Hotcakes+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Hotcakes+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Hotcakes+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Hotcakes+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": true
+  },
+  {
+    "name": "Quotezart",
+    "serialNumber": "059107ac-3422-47a5-b2e1-3c6f6a198af3",
+    "type": "desk",
+    "description": "Ullamco incididunt officia amet dolore enim nulla. Ad sunt eu laborum cillum. Consectetur quis ad incididunt reprehenderit est consequat et Lorem sint ut esse. Voluptate consectetur in ex in occaecat et in sunt deserunt ea proident do elit. Anim ipsum enim minim velit et in dolore ea velit laboris mollit et nostrud reprehenderit.\r\n",
+    "size": {
+      "width": 127,
+      "height": 21,
+      "depth": 92
+    },
+    "stdPrice": 1104,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Quotezart+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Quotezart+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Quotezart+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Quotezart+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Equitax",
+    "serialNumber": "47eb76e7-f088-4683-b189-41a2881fee0d",
+    "type": "table",
+    "description": "In consequat aliqua eiusmod in ullamco magna non sunt ut amet esse laborum non velit. Sit sit in Lorem tempor officia sit eu. Occaecat velit aute enim nostrud in Lorem Lorem anim ex. Quis elit veniam deserunt cupidatat duis ut voluptate adipisicing do tempor. Eu pariatur nulla officia quis reprehenderit commodo est ut esse ullamco nisi ad sunt. Ullamco sunt cillum magna anim sint duis sit tempor labore qui.\r\n",
+    "size": {
+      "width": 118,
+      "height": 108,
+      "depth": 72
+    },
+    "stdPrice": 747,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Equitax+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Equitax+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Equitax+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Equitax+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Zipak",
+    "serialNumber": "16c6067c-dce1-4f70-a7d6-81f1aa24249e",
+    "type": "seating",
+    "description": "Irure incididunt magna fugiat aliqua. Nisi aliquip esse consectetur anim commodo laborum. Qui irure dolor exercitation esse sit amet esse officia sint ex. Laboris qui ad ut adipisicing id. Pariatur irure ex labore consequat anim esse velit. Commodo veniam velit veniam elit cupidatat eu anim laboris. Ad enim officia consectetur sit anim ad commodo eu dolor.\r\n",
+    "size": {
+      "width": 75,
+      "height": 90,
+      "depth": 59
+    },
+    "stdPrice": 1548,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Zipak+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Zipak+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Zipak+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Zipak+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": false
+  },
+  {
+    "name": "Datacator",
+    "serialNumber": "e4e32cfd-4f8d-45e9-835f-4b3a986d2400",
+    "type": "seating",
+    "description": "Anim ea irure proident incididunt Lorem voluptate non irure fugiat dolor. Veniam adipisicing nisi sint incididunt qui. Culpa amet aliquip esse tempor cillum cupidatat reprehenderit consequat amet id laboris. Ipsum amet ad consequat duis ex nostrud in mollit in occaecat ut voluptate.\r\n",
+    "size": {
+      "width": 77,
+      "height": 171,
+      "depth": 126
+    },
+    "stdPrice": 564,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": false
+  },
+  {
+    "name": "Kidstock",
+    "serialNumber": "971844dc-065b-4bfb-9796-68a15deb7cdf",
+    "type": "table",
+    "description": "Id pariatur labore est ea fugiat. Laboris minim laboris nulla ea veniam. Consectetur proident irure do consequat aliquip aliqua pariatur laborum Lorem voluptate in. Eu elit anim officia consequat et exercitation cillum officia laborum magna. Labore irure nisi exercitation pariatur qui duis elit in minim minim ut.\r\n",
+    "size": {
+      "width": 7,
+      "height": 175,
+      "depth": 35
+    },
+    "stdPrice": 2184,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Bitrex",
+    "serialNumber": "8a877168-d99b-410c-b972-2e258adcee4f",
+    "type": "lamp",
+    "description": "Laboris cillum est non deserunt culpa veniam fugiat esse esse velit adipisicing incididunt. Exercitation ex ex excepteur quis irure laboris nisi labore Lorem anim Lorem cillum fugiat. Esse sunt Lorem deserunt fugiat aliqua proident sint. Veniam quis amet dolor fugiat proident minim commodo incididunt elit id laborum dolor incididunt. Sint ullamco fugiat id aliquip laboris culpa culpa mollit nostrud qui eiusmod aliquip aute nulla. Elit ex fugiat consequat ipsum ipsum cillum laboris irure Lorem Lorem officia cillum nulla consequat. Ullamco esse pariatur pariatur quis laborum tempor laborum sit sint.\r\n",
+    "size": {
+      "width": 33,
+      "height": 15,
+      "depth": 77
+    },
+    "stdPrice": 1507,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": false
+  },
+  {
+    "name": "Magnina",
+    "serialNumber": "24b3cacf-316f-434e-aef6-f0e9d8ceb73a",
+    "type": "table",
+    "description": "Quis eu est eu incididunt culpa sunt velit duis officia ad. Exercitation et aliquip ex voluptate esse eu consequat ex proident eu. Consequat labore tempor non deserunt aliqua in esse eu officia reprehenderit non quis. Commodo culpa eiusmod pariatur non. Magna aliqua laborum exercitation deserunt quis ipsum esse laboris nisi quis.\r\n",
+    "size": {
+      "width": 91,
+      "height": 86,
+      "depth": 119
+    },
+    "stdPrice": 1859,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Comtract",
+    "serialNumber": "d705f1b9-5f77-47ce-be9d-180e140af7c1",
+    "type": "table",
+    "description": "Officia esse reprehenderit adipisicing amet fugiat esse aliqua ex ut nostrud ut laboris. Duis cupidatat cupidatat cupidatat nisi quis et sunt mollit in eiusmod anim proident labore nisi. Adipisicing voluptate anim occaecat eu incididunt elit do voluptate fugiat cillum velit. Non voluptate irure amet esse laborum aliquip ipsum nulla amet consequat nulla cupidatat voluptate eu. Nostrud nostrud labore excepteur labore labore ea reprehenderit anim dolor elit ipsum magna laboris. Sint veniam labore nulla consectetur occaecat in aliqua aliqua reprehenderit.\r\n",
+    "size": {
+      "width": 36,
+      "height": 131,
+      "depth": 40
+    },
+    "stdPrice": 2084,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Polaria",
+    "serialNumber": "01e80185-f3c1-4fba-bfa2-06a8f8a8f00a",
+    "type": "desk",
+    "description": "Laboris consectetur consequat laborum sunt excepteur aliquip labore. Quis nulla laboris velit officia. Quis duis sunt amet in consequat et tempor quis.\r\n",
+    "size": {
+      "width": 74,
+      "height": 244,
+      "depth": 47
+    },
+    "stdPrice": 1690,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Nspire",
+    "serialNumber": "f71ed447-50a8-409d-91c0-6411a0b3589a",
+    "type": "storage",
+    "description": "Aliquip aliquip exercitation dolore pariatur laborum voluptate excepteur ex veniam magna irure aliquip excepteur sint. Dolore tempor voluptate commodo laborum est nostrud elit. Mollit consectetur nisi aliquip esse aliquip aliquip aute nostrud mollit proident elit tempor veniam. Incididunt commodo quis nostrud labore consectetur pariatur ipsum nulla quis in laborum. Ea elit in laboris elit ut Lorem pariatur elit sit magna enim dolor. Sunt incididunt deserunt officia quis aute ea culpa velit dolore dolor amet. Elit duis voluptate ex ea aute ullamco.\r\n",
+    "size": {
+      "width": 4,
+      "height": 134,
+      "depth": 120
+    },
+    "stdPrice": 2459,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "fiber",
+    "isActive": true
+  },
+  {
+    "name": "Netur",
+    "serialNumber": "bbb93ab7-3d69-458e-aa45-377c2704a373",
+    "type": "storage",
+    "description": "Quis deserunt commodo elit magna incididunt anim aute esse cupidatat eiusmod quis nostrud nisi. Commodo dolor voluptate do duis deserunt do velit irure quis culpa excepteur. Sint ullamco qui dolore est laborum culpa excepteur eiusmod exercitation laborum aliqua nisi minim. Sint quis Lorem incididunt nulla deserunt anim mollit. Eu dolor anim consequat laboris laboris.\r\n",
+    "size": {
+      "width": 89,
+      "height": 182,
+      "depth": 33
+    },
+    "stdPrice": 274,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": false
+  },
+  {
+    "name": "Inventure",
+    "serialNumber": "302a7774-5fbc-4553-b158-a50564d1071a",
+    "type": "storage",
+    "description": "Laborum laborum qui cillum irure nisi consectetur in elit laboris mollit aliqua non. Fugiat proident est mollit elit. Est et fugiat excepteur deserunt voluptate incididunt do ea mollit.\r\n",
+    "size": {
+      "width": 15,
+      "height": 225,
+      "depth": 52
+    },
+    "stdPrice": 661,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Dognosis",
+    "serialNumber": "49813684-6272-4170-a8cc-4ef9f42e7284",
+    "type": "desk",
+    "description": "Nostrud occaecat reprehenderit commodo Lorem sunt excepteur laboris mollit enim sunt proident. Enim fugiat sit Lorem officia sint. Dolor sint eu ad incididunt ullamco eu. Eu sit elit labore reprehenderit ea aliquip adipisicing veniam veniam amet veniam labore laborum non. Eiusmod Lorem ad sint aute.\r\n",
+    "size": {
+      "width": 49,
+      "height": 226,
+      "depth": 117
+    },
+    "stdPrice": 1255,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Kindaloo",
+    "serialNumber": "e9577882-f546-495b-9727-95fe7fa0e05b",
+    "type": "seating",
+    "description": "Esse ullamco culpa pariatur ut exercitation id do excepteur ullamco veniam. Enim adipisicing proident cillum laborum adipisicing excepteur pariatur fugiat occaecat. Aute elit quis nostrud dolore. Tempor magna nostrud excepteur magna eu.\r\n",
+    "size": {
+      "width": 79,
+      "height": 234,
+      "depth": 71
+    },
+    "stdPrice": 376,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Danja",
+    "serialNumber": "eaeafcbd-215d-45e2-927e-51e8181734ce",
+    "type": "table",
+    "description": "Mollit anim quis velit deserunt magna voluptate magna. Tempor Lorem quis ad ex incididunt enim sunt laboris officia consectetur nostrud sint. Ad sint esse enim occaecat. Enim enim amet exercitation eu aute do pariatur est dolore adipisicing nulla. Esse proident commodo pariatur ipsum adipisicing consequat magna sunt labore. Est reprehenderit voluptate esse consectetur labore aliquip culpa officia fugiat elit.\r\n",
+    "size": {
+      "width": 29,
+      "height": 53,
+      "depth": 60
+    },
+    "stdPrice": 1196,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "cloth",
+    "isActive": false
+  },
+  {
+    "name": "Zillar",
+    "serialNumber": "ac459244-0ba7-46e4-8132-fe2b27c139f8",
+    "type": "desk",
+    "description": "Officia cupidatat et anim sint ut et occaecat nulla reprehenderit excepteur aliquip eiusmod aliqua. Laboris ea reprehenderit ipsum ea consequat deserunt cillum. Ipsum adipisicing in ut id. Et proident ut velit quis elit duis occaecat consequat ut amet ad Lorem culpa.\r\n",
+    "size": {
+      "width": 118,
+      "height": 23,
+      "depth": 50
+    },
+    "stdPrice": 2190,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": false
+  },
+  {
+    "name": "Ziggles",
+    "serialNumber": "9893a1e6-8de1-41c9-84d4-1ac209b7b8c1",
+    "type": "desk",
+    "description": "Magna aliqua enim ut reprehenderit excepteur laborum commodo aliqua Lorem esse reprehenderit laboris. Lorem eu eiusmod sint sit nisi id culpa. Ea incididunt minim aute amet esse dolor dolore sit ullamco sunt ad amet culpa. Proident veniam dolor aliqua do fugiat id et Lorem aliquip consectetur dolor velit. Nulla voluptate proident occaecat amet cupidatat laboris deserunt. Elit officia aute consectetur duis tempor.\r\n",
+    "size": {
+      "width": 43,
+      "height": 235,
+      "depth": 93
+    },
+    "stdPrice": 660,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "wood",
+    "isActive": true
+  },
+  {
+    "name": "Proxsoft",
+    "serialNumber": "4431150a-33f2-4922-a153-6f5ae332dbb2",
+    "type": "lamp",
+    "description": "Nisi esse exercitation anim fugiat magna ut enim eu id excepteur. Elit do nulla velit est dolore veniam nulla nostrud irure aliquip. Consectetur adipisicing nulla proident nisi non ex fugiat minim tempor sit aliqua aliquip. Proident pariatur anim sit amet. Enim fugiat magna magna tempor ipsum incididunt minim aliquip est exercitation dolore id. Nisi Lorem aliqua anim irure ex minim proident labore dolor sunt enim consectetur anim minim. Fugiat aliqua qui velit cupidatat incididunt magna consequat.\r\n",
+    "size": {
+      "width": 79,
+      "height": 94,
+      "depth": 124
+    },
+    "stdPrice": 475,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "steel",
+    "isActive": true
+  },
+  {
+    "name": "Imageflow",
+    "serialNumber": "bd32cbef-60fd-4809-9b6e-14031f0a48e7",
+    "type": "desk",
+    "description": "Nostrud tempor aliquip fugiat qui minim est. Irure tempor eiusmod occaecat tempor non sit amet elit cillum ex veniam ea. Fugiat amet consequat dolor adipisicing. Lorem eu in laborum consectetur dolore ea irure anim. Voluptate reprehenderit dolor laborum ex ea elit commodo velit aliqua occaecat ea dolor fugiat nulla.\r\n",
+    "size": {
+      "width": 150,
+      "height": 35,
+      "depth": 51
+    },
+    "stdPrice": 435,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": false
+  },
+  {
+    "name": "Quility",
+    "serialNumber": "68ce370e-9578-4a44-a741-2851df359808",
+    "type": "table",
+    "description": "Deserunt cupidatat anim commodo aliqua laborum velit nostrud. Elit voluptate laboris ullamco ipsum labore. Consequat eiusmod eu excepteur nisi consectetur fugiat cupidatat exercitation. Reprehenderit sunt magna nisi cillum magna officia velit eiusmod. Nulla irure proident cupidatat Lorem minim mollit anim eiusmod laboris sunt nulla cupidatat laborum nulla. Quis anim non reprehenderit enim cupidatat voluptate in ipsum mollit excepteur amet. Enim laborum reprehenderit aliqua veniam mollit sit ex elit proident et reprehenderit minim nostrud veniam.\r\n",
+    "size": {
+      "width": 38,
+      "height": 164,
+      "depth": 66
+    },
+    "stdPrice": 380,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": true
+  },
+  {
+    "name": "Skybold",
+    "serialNumber": "7d5bee2d-2ac5-487b-8c95-a468dfaf2aaf",
+    "type": "table",
+    "description": "Quis nulla quis duis consectetur. Irure nostrud mollit sit cupidatat consectetur ullamco sit ut esse commodo amet proident sunt sunt. Sint ea non magna excepteur nisi ea culpa laboris in quis. Labore dolor aliqua aliquip labore laboris.\r\n",
+    "size": {
+      "width": 48,
+      "height": 195,
+      "depth": 34
+    },
+    "stdPrice": 256,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "fiber",
+    "isActive": true
+  },
+  {
+    "name": "Gynk",
+    "serialNumber": "f831d356-438d-48b3-81aa-cc0b057e482a",
+    "type": "desk",
+    "description": "Incididunt Lorem fugiat excepteur commodo ullamco sit laboris culpa. Voluptate ex dolore sint pariatur eu consequat nostrud commodo. Ad aliquip amet consequat quis labore adipisicing mollit adipisicing. Amet aliqua deserunt ad amet labore.\r\n",
+    "size": {
+      "width": 134,
+      "height": 234,
+      "depth": 52
+    },
+    "stdPrice": 1120,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "fiber",
+    "isActive": false
+  },
+  {
+    "name": "Farmage",
+    "serialNumber": "3a42bdde-60d2-4a25-8d9a-e04cccdf14b2",
+    "type": "lamp",
+    "description": "Veniam exercitation aliquip laboris consequat voluptate consequat reprehenderit cillum sit ullamco. Mollit cupidatat est in cillum magna consequat deserunt est mollit ad labore sunt enim aliqua. Exercitation commodo excepteur enim mollit quis magna. Ex elit velit ullamco ex commodo mollit ut labore deserunt et do ex labore. Est qui anim enim cillum dolore aliqua elit ex exercitation commodo incididunt sint. Nulla nisi laborum commodo labore anim sit quis anim laborum quis. Eiusmod adipisicing velit aliquip qui.\r\n",
+    "size": {
+      "width": 98,
+      "height": 243,
+      "depth": 124
+    },
+    "stdPrice": 1513,
+    "pictures": {
+      "url": [
+        "https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1",
+        "https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2",
+        "https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3",
+        "https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4"
+      ]
+    },
+    "material": "copper",
+    "isActive": true
+  }
+]
