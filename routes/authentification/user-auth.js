@@ -94,7 +94,7 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
   })
   
 
-  router.get("/logout", (req, res, next)=>{
+  router.get("/signout", (req, res, next)=>{
     //req.logOut() is a Passport method that removes the USER ID from the session
     req.logOut();
     req.flash("success", "Logged out successfully! ");
