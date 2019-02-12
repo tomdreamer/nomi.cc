@@ -17,6 +17,7 @@ router.get("/custumerSignup", (req,res,next)=>{
 router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, res, next)=>{
     const {email, originalPassword, name, surname, phoneNum}= req.body;
     //encrypt the user's password before saving
+    const {role} = "customer";
     const encryptedPassword =  bcrypt.hashSync(originalPassword, 10);
     
     console.log("file upload is Always in req.file OR req.files", req.file);
@@ -34,7 +35,7 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
       return;
     }
   
-     User.create({email, encryptedPassword, name, surname, phoneNum, picture})
+     User.create({email, encryptedPassword, name, surname, phoneNum, picture, role})
      .then(()=>{
       // req.flash() sends by the "connect-flash" npm package
       //(it's defined by the "connect-flash" npm package)
