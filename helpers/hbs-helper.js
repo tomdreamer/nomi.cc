@@ -36,8 +36,14 @@ hbs.registerHelper("formatDate", function(dateString) {
 	);
 });
 
-// show only user first letter {{firstLetterOnly string}}
-hbs.registerHelper("firstLetterOnly", function(input) {
+// capitalize first character {{capitalize string}}
+hbs.registerHelper("capitalize", function(string) {
+	if (!util.isString(string)) return "";
+	return string.charAt(0).toUpperCase() + string.slice(1);
+});
+
+// show only user first character {{firsCharOnly string}}
+hbs.registerHelper("firsCharOnly", function(input) {
 	//
 	// with a return..
 });
