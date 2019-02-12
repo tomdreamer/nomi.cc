@@ -8,7 +8,7 @@ const userSchema = new Schema({
 	name: {
 		type: String,
 		required: true,
-		minlength: 3,
+		minlength: 2,
 		maxlength: 64
 	},
 	surname: {
@@ -21,7 +21,7 @@ const userSchema = new Schema({
 		type: String,
 		required: true,
 		unique: true,
-		//match: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+		match: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
 		// https://stackoverflow.com/a/46181/3468846
 		minlength: 5,
 		maxlength: 254
@@ -42,8 +42,9 @@ const userSchema = new Schema({
 	//PB avec le match: a traiter
 	picture: {
 		type: String,
-//	match: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/,
+		// match: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/,
 		// https://stackoverflow.com/a/3809435/3468846
+		default: "http://example.com/avatar.jpg"
 	},
 	company: {
 		type: String,
@@ -64,7 +65,7 @@ const userSchema = new Schema({
 	role: {
 		type: String,
 		required: true,
-		enum: ["admin", "editor", "designer", "owner", "customer"],
+		enum: ["admin", "editor", "designer", "crafter", "customer"],
 		default: "customer"
 	},
 	encryptedPassword: {

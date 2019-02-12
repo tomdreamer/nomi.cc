@@ -48,7 +48,7 @@
     "company": "Geekosis",
     "terms": false,
     "isActive": false,
-    "role": "owner",
+    "role": "crafter",
     "encryptedPassword": "$2y$12$ei4sLQg9hSRXAvCGK9NvaOjMFL1G1ByLDhF1esA4bQEnlFwDJScDG"
   },
   {
@@ -61,7 +61,7 @@
     "company": "Valpreal",
     "terms": true,
     "isActive": true,
-    "role": "owner",
+    "role": "crafter",
     "encryptedPassword": "$2y$12$.GftDtgqNXK/VaeTZ9mqPeZp7CynaDgLg7uId.pTqzgwlFskzqD2G"
   }
 ]
