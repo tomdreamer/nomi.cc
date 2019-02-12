@@ -44,6 +44,7 @@ const userSchema = new Schema({
 		type: String,
 		// match: /https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/,
 		// https://stackoverflow.com/a/3809435/3468846
+		default: "http://example.com/avatar.jpg"
 	},
 	company: {
 		type: String,
@@ -64,7 +65,7 @@ const userSchema = new Schema({
 	role: {
 		type: String,
 		required: true,
-		enum: ["admin", "editor", "designer", "owner", "customer"],
+		enum: ["admin", "editor", "designer", "crafter", "customer"],
 		default: "customer"
 	},
 	encryptedPassword: {
