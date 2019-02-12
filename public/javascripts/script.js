@@ -18,7 +18,4 @@ function setFooterStyle() {
 	}
 	$("footer").removeClass("invisible");
 }
-$(document).ready(function() {
-	setFooterStyle();
-	window.onresize = setFooterStyle;
-});
+

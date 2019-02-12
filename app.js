@@ -103,4 +103,6 @@ app.use("/", auth);
 const furniture = require("./routes/furniture-route");
 app.use("/", furniture);
 
+const userManagement = require("./routes/user-management-route");
+app.use("/", userManagement);
 module.exports = app;
