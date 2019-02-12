@@ -101,7 +101,7 @@ Furniture.create(furnitureData)
 //     company: '{{company()}}',
 //     terms: '{{bool()}}',
 //     isActive: '{{bool()}}',
-//     role: '{{random("editor", "designer", "owner", "customer")}}',
+//     role: '{{random("editor", "designer", "crafter", "customer")}}',
 //     encryptedPassword: 'TOCHANGE'
 //   }
 // ]
