@@ -61,23 +61,26 @@ var admin2 = {
 
 User.create(admin1, admin2, function(e) {
 	if (e) {
+		console.log("Please fill .env file to setup defaults admins");
 		throw e;
 	} else {
-		console.log(`${admin1.name} ${admin2.name} were created !💃`);
+		console.log(
+			`Administrators ${admin1.name} and ${admin2.name} were created !`
+		);
 	}
 });
 
 User.create(userData)
 	.then(data => {
-		console.log("🔥", userData.length, "users were added.");
+		console.log("🤼‍", userData.length, "users were added.");
 	})
 	.catch(err => {
-		console.log("Something went wrong...", err);
+		console.log("Users are crying..something is wrong  💩", err);
 	});
 
 Furniture.create(furnitureData)
 	.then(data => {
-		console.log("🔥", furnitureData.length, "Furnitures were added.");
+		console.log("🛋", furnitureData.length, "furnitures were added.");
 	})
 	.catch(err => {
 		console.log("Chairs are flying..something is wrong 💩", err);
