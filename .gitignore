@@ -10,3 +10,4 @@ npm-debug.log
 # sass generated css
 public/stylesheets/style.css
 public/stylesheets/style.css.map
+.jshintrc
