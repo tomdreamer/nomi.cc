@@ -7,7 +7,7 @@ const fileUploader = require("../../config/file-upload.js")
 
 const router= express.Router();
 
-router.get("/custumerSignup", (req,res,next)=>{
+router.get("/signup/custumer", (req,res,next)=>{
     res.render("auth-views/user-custumer-signUp-form.hbs");
 })
 
@@ -133,7 +133,7 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
   //Routers for fablab and designers whiech be named CREATORS
   //-----------------------------------------------------------------------------
 
-  router.get("/creatorsSignup", (req,res,next)=>{
+  router.get("/signup/creators", (req,res,next)=>{
     res.render("auth-views/user-creators-signUp-form.hbs");
 })
 
@@ -141,7 +141,7 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
 // single() for ONE file
 // or array() for MANY files  behind fileUploader
 router.post("/process-signUpCreators", fileUploader.single("pictureUpload"), (req, res, next)=>{
-    const {email, originalPassword, name, surname, phoneNum, role}= req.body;
+    const {email, originalPassword, name, surname, phoneNum, role, company}= req.body;
     //encrypt the user's password before saving
     
     const encryptedPassword =  bcrypt.hashSync(originalPassword, 10);
@@ -150,6 +150,9 @@ router.post("/process-signUpCreators", fileUploader.single("pictureUpload"), (re
 
     let picture;
 
+    if(!company){
+      company = "freelancer";
+    }
     if (req.file) {
       picture = req.file.secure_url;
     }
@@ -188,7 +191,7 @@ router.post("/process-signUpCreators", fileUploader.single("pictureUpload"), (re
       return;
     }
     
-     User.create({email, encryptedPassword, name, surname, phoneNum, picture, role})
+     User.create({email, encryptedPassword, name, surname, phoneNum, picture, role, company})
      .then(()=>{
       // req.flash() sends by the "connect-flash" npm package
       //(it's defined by the "connect-flash" npm package)
