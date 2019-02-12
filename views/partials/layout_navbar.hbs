@@ -16,6 +16,29 @@
 				{{!-- <li class="nav-item order-2 order-md-1"><a href="#" class="nav-link" title="settings"><i
 							class="fa fa-cog fa-fw fa-lg"></i></a></li> --}}
 
+			{{#if currentUser}}
+			<li class="dropdown order-1 nav-link-button d-none d-md-block">
+					<button type="button" id="dropdownMenu1" data-toggle="dropdown"
+						class="btn btn-sm btn-outline-primary dropdown-toggle">{{currentUser.name}} <span class="caret"></span></button>
+					<ul class="dropdown-menu dropdown-menu-right mt-2">
+						<li class="px-3 py-2">
+							<form role="form" action="/process-logInCust" method="POST">
+							
+								<div class="form-group">
+									<button type="submit" class="btn btn-primary btn-block">Disconnect</button>
+								</div>
+
+								{{!-- TODO Reset access modal trigger --}}
+								{{!-- <div class="form-group text-center">
+									<small><a href="#" data-toggle="modal" data-target="#modalPassword">Forgot password?</a></small>
+								</div> --}}
+							</form>
+						</li>
+					</ul>
+				</li>
+      {{else}}
+      
+      
 				{{!-- sign UP form link --}}
 				<li class="nav-item"><a href="/custumerSignup" class="nav-link">Sign Up as custumer</a></li>			
 				{{!-- login form desktop ony --}}
@@ -46,8 +69,10 @@
 					</ul>
 				</li>
 
+			{{/if}}
+
 				{{!-- login link mobile ony --}}
-				<li class="nav-item d-md-none"><a href="#" class="nav-link">Login</a>
+				<li class="nav-item d-md-none"><a href="/login" class="nav-link">Login</a>
 				</li>
 			</ul>
 		</div>
