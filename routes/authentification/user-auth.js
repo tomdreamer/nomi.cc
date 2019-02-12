@@ -23,18 +23,40 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
     console.log("file upload is Always in req.file OR req.files", req.file);
 
     const picture= req.file.secure_url;
-
-     //enforce password rules (can't be empty and MUST have a digit)
-     // ! = if it is empty
-    if( !originalPassword || !originalPassword.match(/[0-9]/)){
+    
+    User.findOne({email :{$eq: email} })
+    .then(userDoc => {
+      // redirect to login page if result is NULL (no account with the email)
+      if(userDoc){
       // req.flash() sends by the "connect-flash" npm package
       //(it's defined by the "connect-flash" npm package)
-      req.flash("error", "Password can't be blank and must contain a number");
+      req.flash("danger", "Email already used! Try a an other one.");
+  
       res.redirect("/custumerSignup");
-      // use return to STOP the function here if the password is BAD
+      }
+    })
+    
+     //enforce password rules (can't be empty and MUST have a digit)    
+    if( !originalPassword || !originalPassword.match(/[0-9]/)){
+      
+      req.flash("danger", "Password can't be blank and must contain a number");
+      res.redirect("/custumerSignup");  
       return;
     }
+      
+    if(name.length <= 2 || name.length >= 64) {
+      console.log("le nom est inf à 2", name);
+      req.flash("danger", "The name must be grater than 2 letters and smaller than 64");
+      res.redirect("/custumerSignup");  
+      return;
+    } 
   
+    if(!phoneNum.match(/((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))/)){
+      
+      req.flash("danger", "number must have one of these formats +33698912549, +33 6 79 91 25 49, +33-6-79-91-25-49, (555)-555-5555, 555-555-5555");
+      res.redirect("/custumerSignup");  
+      return;
+    }
      User.create({email, encryptedPassword, name, surname, phoneNum, picture, role})
      .then(()=>{
       // req.flash() sends by the "connect-flash" npm package
@@ -70,7 +92,7 @@ router.post("/process-signUpCust", fileUploader.single("pictureUpload"), (req, r
       if(!bcrypt.compareSync(originalPassword, encryptedPassword)){
         // req.flash() sends by the "connect-flash" npm package
         //(it's defined by the "connect-flash" npm package)
-      req.flash("error", "Password is incorrect");
+      req.flash("danger", "Password is incorrect");
         // redirect to LOGIN PAGE fi the password don't match
         res.redirect("/login");
         // use return to STOP the function here if the PASSWORD is BAD
