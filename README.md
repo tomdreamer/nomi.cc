@@ -1,18 +1,11 @@
 # Nomi
 
-> Short blurb about what the product does.
-
-[![NPM Version][npm-image]][npm-url]
-[![Build Status][travis-image]][travis-url]
-[![Downloads Stats][npm-downloads]][npm-url]
-
 Nomi is a place that gathers people interested on design and DIY culture with a curated list of designers and fab labs.
 
 It provide an interface for users to choose different patterns and create customized furniture plans to assemble in the Fablab community of their choice using local ressources only.
 
 The app also helps Designers and Fab Labs to collaborate bringing future projects and people with matching skills and facilities together.
 
-![](header.png)
 
 ## Release History
 
@@ -63,11 +56,5 @@ PASSPORT_SECRET=randomString
 3. Commit your changes (`git commit -am 'Add some fooBar'`)
 4. Push to the branch (`git push origin feature/fooBar`)
 5. Create a new Pull Request
-
-<!-- Markdown link & img dfn's -->
-
-[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
-[npm-url]: https://npmjs.org/package/datadog-metrics
-[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
 
 Distributed under the TODO license.
