@@ -38,7 +38,7 @@ hbs.registerHelper("formatDate", function(dateString) {
 
 // capitalize first character {{capitalize string}}
 hbs.registerHelper("capitalize", function(string) {
-	if (!util.isString(string)) return "";
+	if (typeof string !== "string") return "";
 	return string.charAt(0).toUpperCase() + string.slice(1);
 });
 
