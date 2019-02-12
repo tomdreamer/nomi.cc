@@ -1,0 +1,122 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="col-sm-12 mb-2">
+			<div class="row">
+				<div class="col-md-12 p-5 bg-light border shadow-sm">
+					<h4>Edit a Design <small class="text-muted"></small> </h4>
+					<hr>
+
+					<form action="/furnitures/{{furnitureItem._id}}/update" method="POST">
+						<div class="form-row">
+							<div class="col my-2">
+								<input type="text" name="name" value="{{furnitureItem.name}}" class="form-control"
+									placeholder="Design name *" minlength="3" maxlength="64" required>
+							</div>
+
+							<div class="col-sm-4 my-2 text-muted text-center">
+								<select class="form-control" id="furniture-select-type" name="type" required>
+									<option value="desk" {{optionSelectArray furnitureItem.type "desk"}}>Desk</option>
+									<option value="lamp" {{optionSelectArray furnitureItem.type "lamp"}}>Lamp</option>
+									<option value="table" {{optionSelectArray furnitureItem.type "table"}}>Table</option>
+									<option value="seat" {{optionSelectArray furnitureItem.type "seat"}}>Seat</option>
+									<option value="storage" {{optionSelectArray furnitureItem.type "storage"}}>Storage</option>
+								</select>
+							</div>
+
+							<div class="col my-2">
+								<div class="input-group">
+									<div class="input-group-prepend">
+										<span class="input-group-text" id="basic-addon1">$</span>
+									</div>
+									<input type="number" class="form-control" placeholder="Price *" aria-label="Price" name="stdPrice"
+										value="{{furnitureItem.stdPrice}}" required>
+								</div>
+							</div>
+
+						</div>
+
+						<div class="form-row">
+
+							<div class="col my-2">
+								<div class="input-group">
+									<input type="number" name="width" value="{{furnitureItem.size.width}}" class="form-control"
+										placeholder="Width (centimeters) *" min="1" max="5000" required>
+									<div class="input-group-append">
+										<span class="input-group-text">cm</span>
+									</div>
+								</div>
+							</div>
+
+							<div class="col my-2">
+								<div class="input-group">
+									<input type="number" name="height" value="{{furnitureItem.size.height}}" class="form-control"
+										placeholder="Height (centimeters) *" min="1" max="5000" required>
+									<div class="input-group-append">
+										<span class="input-group-text">cm</span>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col my-2">
+								<div class="input-group">
+									<input type="number" name="depth" value="{{furnitureItem.size.depth}}" class="form-control"
+										placeholder="Depth (centimeters) *" min="1" max="5000" required>
+									<div class="input-group-append">
+										<span class="input-group-text">cm</span>
+									</div>
+								</div>
+
+							</div>
+
+
+						</div>
+
+						<div class="form-row">
+							<div class="col my-2">
+								<textarea type="text" name="description" class="form-control" rows="3"
+									placeholder="Description ">{{furnitureItem.description}}</textarea>
+							</div>
+
+							<div class="col-sm-3 my-2 text-muted">
+								<select multiple required class="form-control" id="furniture-select-material" name="material">
+									<option value="" class="text-muted" disabled>Material(s) *</option>
+									<option {{optionSelectArray furnitureItem.material "fiber"}} class="text-dark">
+										fiber
+									</option>
+									<option {{optionSelectArray furnitureItem.material "iron"}} class="text-dark">
+										iron
+									</option>
+									<option {{optionSelectArray furnitureItem.material "cloth"}} class="text-dark">
+										cloth</option>
+									<option {{optionSelectArray furnitureItem.material "copper"}} class="text-dark">
+										copper</option>
+									<option {{optionSelectArray furnitureItem.material "steel"}} class="text-dark">
+										steel</option>
+									<option {{optionSelectArray furnitureItem.material "wood"}} class="text-dark">wood
+									</option>
+								</select>
+							</div>
+
+							<div class="col-sm-9">
+								<div class="form-check my-2">
+									<label class="form-check-label">
+										<input type="checkbox" name="isActive" class="form-check-input"
+											{{booleanToCheck furnitureItem.isActive}}>
+										Make it available to customers ?
+									</label>
+								</div>
+							</div>
+
+						</div>
+						<hr>
+
+						<button class="btn btn-warning btn mt-2">Save</button>
+
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

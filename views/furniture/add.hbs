@@ -4,66 +4,77 @@
 			<div class="row">
 				<div class="col-md-12 p-5 bg-light border shadow-sm">
 					<h4>Submit a Design <small class="text-muted"></small> </h4>
-					<p> Pommy ipsum ever so lovely lass lad atrocious wellies old girl odds and sods, Union Jack a bottle of plonk
-						a bit wonky
-						jellied eels chav stiff upper lip make a brew. Atrocious I bid you good day bag egg's old boy Dr. Watson
-						fancy a cuppa</p>
+					<p class="lead">
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum non dolor ac nibh sagittis molestie eget
+						vitae.</p>
 					<hr>
 
 					<form action="/furnitures/new" method="POST">
 						<div class="form-row">
 
 							<div class="col my-2">
-								<input type="text" name="name" class="form-control" placeholder="Design title *" minlength="3"
-									maxlength="64" required>
-							</div>
-						</div>
-
-						<div class="form-row">
-							<div class="col my-2">
-								<input type="number" name="width" class="form-control" placeholder="Width (centimeters) *" min="1"
-									max="5000" required>
+								<input type="text" name="name" value="{{previousFormInput.name}}" class="form-control"
+									placeholder="Design title *" minlength="3" maxlength="64" required>
 							</div>
 
-							<div class="col my-2">
-								<input type="number" name="height" class="form-control" placeholder="Height (centimeters) *" min="1"
-									max="5000" required>
-							</div>
-
-							<div class="col my-2">
-								<input type="number" name="depth" class="form-control" placeholder="Depth (centimeters) *" min="1"
-									max="5000" required>
-							</div>
-
-						</div>
-
-						<div class="form-row">
-							<div class="col my-2">
-								<textarea type="text" name="description" class="form-control" rows="3"
-									placeholder="Description * "></textarea>
-							</div>
-
-							<div class="col-sm-3 my-2 text-muted text-center">
-								<select multiple class="form-control" id="exampleFormControlSelect2">
-									<option>Copper</option>
-									<option>Cloth</option>
-									<option>Fiber</option>
-									<option>Iron</option>
-									<option>Wood</option>
+							<div class="col-sm-4 my-2 text-muted text-center">
+								<select class="form-control" id="furniture-select-material" name="type" required>
+									<option value="{{previousFormInput.type}}" disabled selected>Furniture category *</option>
+									<option value="desk">Desk</option>
+									<option value="lamps">Lamp</option>
+									<option value="tables">Table</option>
+									<option value="seats">Seat</option>
+									<option value="storage">Storage</option>
 								</select>
+							</div>
+						</div>
 
+						<div class="form-row">
+							<div class="col my-2">
+								<input type="number" name="width" value="{{previousFormInput.width}}" class="form-control"
+									placeholder="Width (centimeters) *" min="1" max="5000" required>
 							</div>
 
+							<div class="col my-2">
+								<input type="number" name="height" value="{{previousFormInput.height}}" class="form-control"
+									placeholder="Height (centimeters) *" min="1" max="5000" required>
+							</div>
+
+							<div class="col my-2">
+								<input type="number" name="depth" value="{{previousFormInput.depth}}" class="form-control"
+									placeholder="Depth (centimeters) *" min="1" max="5000" required>
+							</div>
+
+						</div>
+
+						<div class="form-row">
+							<div class="col my-2">
+								<textarea type="text" name="description" value="{{previousFormInput.description}}" class="form-control"
+									rows="3" placeholder="Description "></textarea>
+							</div>
+
+							<div class="col-sm-3 my-2 text-muted">
+								<select multiple required class="form-control" id="furniture-select-material" name="material">
+									<option value="" class="text-muted" disabled>Material(s) *</option>
+									<option value="wood" class="text-dark" selected>Wood</option>
+									<option value="fiber" class="text-dark">Fiber</option>
+									<option value="iron" class="text-dark">Iron</option>
+									<option value="copper" class="text-dark">Copper</option>
+									<option value="cloth" class="text-dark">Cloth</option>
+
+								</select>
+							</div>
+							{{previousForm}}
 						</div>
 
 						<div class="col-sm-12 my-2">
-							<input type="file" class="custom-file-input btn-default" id="inputGroupFile01">
-							<label class="custom-file-label" for="inputGroupFile01"> <i class="fa fa-file-pdf-o pr-1"
-									aria-hidden="true"></i> <small class="text-muted"> Porfolio</small></label>
+							<input type="file" class="custom-file-input btn-default" id="inputGroupFile01" name="file">
+							<label class="custom-file-label text-muted" for="inputGroupFile01"> <i class="fa fa-file-pdf-o pr-1"
+									aria-hidden="true"></i>Furniture specification file</label>
 						</div>
 						<hr>
 
-						<button class="btn btn-success btn mt-2">Submit</button>
+						<button class="btn btn-success btn mt-2">Submit !</button>
 
 				</div>
 				</form>
