@@ -92,7 +92,7 @@ app.use((req, res, next) => {
 });
 
 // default value for title local
-app.locals.title = "Express users";
+app.locals.title = "Nomi";
 
 const index = require("./routes/index");
 app.use("/", index);
@@ -100,9 +100,13 @@ app.use("/", index);
 const auth = require("./routes/authentification/user-auth");
 app.use("/", auth);
 
+const userManagement = require("./routes/user-management-route");
+app.use("/", userManagement);
+
 const furniture = require("./routes/furniture-route");
 app.use("/", furniture);
 
-const userManagement = require("./routes/user-management-route");
-app.use("/", userManagement);
+const manufacturer = require("./routes/manufacturer-route");
+app.use("/", manufacturer);
+
 module.exports = app;

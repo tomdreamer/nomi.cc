@@ -1,0 +1,57 @@
+<div class=" pb-4 p-3">
+	<div class="row">
+
+		{{#with manufacturerItem}}
+
+		{{!-- furniture gallery TODO owlcarousel --}}
+		<div class="col-md-6">
+			<div class="manufacturerItem-gallery w-50 h-25">
+				<div class="owl-carousel h-25">
+					<ul class="list-unstyled list-inline">
+						{{#each this.pictures}}
+						<li><a href="#"><img src="{{this}}" alt="Product" class="product-thumbnail img-fluid"></a></li>
+						{{/each}}
+					</ul>
+				</div>
+
+				<ul class="product-thumbnails d-none list-unstyled">
+					{{#each this.pictures}}
+					<li><a href="#"><img src="{{this}}" alt="Product" class="product-thumbnail img-fluid"></a></li>
+					{{/each}}
+				</ul>
+
+			</div>
+		</div>
+
+		{{!-- furniture card --}}
+		<div class="col-md-6">
+			<div class="card border-default bg-white pt-2 shadow-sm">
+				<div class="card-body">
+					<h2 class="mb-3">{{this.name}}</h2>
+					<h3 class="text-normal"> ${{this.phoneNum}}</h3>
+					<p class="text-sm text-muted">{{this.description}}</p>
+					<p class="text-sm text-muted">
+						<ul class="list-unstyled">
+							<p class="lead">Available skills</p>
+							{{#each this.availableProcess}}
+							<li class="text-info">- {{this}}</li>
+							{{/each}}
+						</ul>
+					</p>
+					<div class="d-flex flex-wrap justify-content-around align-items-center">
+						<a class="btn btn-outline-warning btn-sm" href="/workshops/{{this._id}}/edit">&nbsp;Edit</a>
+						<div class="py-2">
+							<span class="d-inline-block align-middle text-sm text-muted mr-2">Share:</span>
+							<a class="text-muted mr-2" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a class="text-muted mr-2" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+							<a class="text-muted mr-2" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+							<a class="text-muted mr-2" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{{/with}}
+	</div>
+</div>

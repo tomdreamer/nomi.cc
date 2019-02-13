@@ -1,0 +1,106 @@
+<div class="col-sm-12 mb-2">
+	<div class="row">
+		<div class="col-md-12 p-5 bg-light border shadow-sm">
+			<h4>Edit a Fab Lab <small class="text-muted"></small> </h4>
+			<hr>
+
+			<form action="/workshops/{{manufacturerItem._id}}/update" method="POST">
+
+				<div class="form-row">
+					<div class="col my-2">
+						<input type="text" name="name" value="{{manufacturerItem.name}}" class="form-control"
+							placeholder="Fab Lab Name *" minlength="3" maxlength="64" required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="col my-2">
+						<input type="text" name="streetAddress" value="{{manufacturerItem.address.streetAddress}}"
+							class="form-control" placeholder="Street *" minlength="1" maxlength="256" required>
+					</div>
+
+					<div class="col my-2">
+						<input type="text" name="city" value="{{manufacturerItem.address.city}}" class="form-control"
+							placeholder="City" minlength="1" maxlength="32" required>
+					</div>
+
+					<div class="col my-2">
+						<input type="text" name="zipCode" value="{{manufacturerItem.address.zipCode}}" class="form-control"
+							placeholder="Zip Code *" minlength="1" maxlength="16" required>
+					</div>
+
+					<div class="col my-2">
+						<input type="text" name="country" value="{{manufacturerItem.address.country}}" class="form-control"
+							placeholder="Country *" minlength="1" maxlength="64" required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="col my-2">
+						<input type="text" name="email" value="{{manufacturerItem.email}}" class="form-control"
+							placeholder="Contact email *" minlenghth="1" maxlength="254" required>
+					</div>
+
+					<div class="col my-2">
+						<input type="text" name="phoneNum" value="{{manufacturerItem.phoneNum}}" class="form-control"
+							placeholder="Phone Number *" minlength="8" maxlength="64" required>
+					</div>
+				</div>
+
+				<div class="form-row">
+					<div class="col-sm-12 my-2">
+						<textarea type="text" name="description" class="form-control" rows="6"
+							placeholder="A short story about your Fab Lab, it's team and their skillset. 1200 caracters max *">{{manufacturerItem.description}}</textarea>
+					</div>
+				</div>
+
+				<div class="form-row d-flex justify-content-between align-items-end">
+					<div class="col-sm-3 my-2 text-muted">
+						<select multiple required class="form-control" id="furniture-select-material" name="availableProcess">
+							<option value="" class="text-muted" disabled>Material(s) *</option>
+							<option {{optionSelectArray manufacturerItem.availableProcess "cutting"}} class="text-dark">
+								cutting
+							</option>
+
+							<option {{optionSelectArray manufacturerItem.availableProcess "drilling"}} class="text-dark">
+								drilling
+							</option>
+
+							<option {{optionSelectArray manufacturerItem.availableProcess "engraving"}} class="text-dark">
+								engraving
+							</option>
+
+							<option {{optionSelectArray manufacturerItem.availableProcess "heating"}} class="text-dark">
+								heating
+							</option>
+
+							<option {{optionSelectArray manufacturerItem.availableProcess "milling"}} class="text-dark">
+								milling
+							</option>
+
+							<option {{optionSelectArray manufacturerItem.availableProcess "printing"}} class="text-dark">
+								printing
+							</option>
+
+							<option {{optionSelectArray manufacturerItem.availableProcess "wielding"}} class="text-dark">
+								wielding
+							</option>
+						</select>
+					</div>
+
+					<div class="col-sm-6 my-2  d-flex align-items-center">
+						<a class="btn btn-primary btn" href="{{manufacturerItem.file}}"><i class="fa fa-download"
+								aria-hidden="true"></i> Download attached docs </a>
+					</div>
+				</div>
+
+				<hr class="mt-2">
+
+				<button class="btn btn-warning">Save</button>
+				<a class="btn btn-outline-danger ml-2" href="/workshops/{{manufacturerItem._id}}/delete"
+					onclick="return confirm('Are you sure?')">Delete <i class="fa fa-remove"></i></a>
+
+		</div>
+		</form>
+	</div>
+</div>

@@ -19,3 +19,13 @@ function setFooterStyle() {
 	$("footer").removeClass("invisible");
 }
 
+$(document).ready(function() {
+	setFooterStyle();
+	window.onresize = setFooterStyle;
+
+	$("#nav-link-technology, #technology-list").click(function() {
+		$("#technology-list").toggleClass("d-none");
+		$("#nav-link-map").toggleClass("d-none");
+		//.show(1000);
+	});
+});

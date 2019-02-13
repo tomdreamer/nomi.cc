@@ -1,0 +1,28 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="col-sm-12 mb-2">
+			<a class="btn btn-success mb-2" href="/workshops/add" role="button">Add workshop</a>
+		</div>
+	</div>
+	<div class="row">
+		{{#each manufacturerArray}}
+		<div class="col-sm-4 p-0 border-right border-bottom">
+			<div class="py-3 rounded-0 m-2">
+				<a href="/workshops/{{this._id}}" class="">
+					<img class="card-img-top" src="{{this.pictures.[0]}}" alt="fab lab picture">
+				</a>
+				<div class="card-body">
+					<h5 class="card-title"> {{this.name}} </h5>
+					<p class="card-text">${{this.phoneNum}}</p>
+					<p class="card-text"> {{truncate this.description 140}}</p>
+					<a href="/workshops/{{this._id}}" class="btn btn-primary">See </a>
+					<p class="card-text"><small class="text-muted text-uppercase"> <i class="fa fa-map-marker"
+								aria-hidden="true"></i>
+							{{this.address.country}} <i class="ml-4 fa fa-cog" aria-hidden="true"></i>
+							{{this.availableProcess}}</small></p>
+				</div>
+			</div>
+		</div>
+		{{/each}}
+
+	</div>

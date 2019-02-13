@@ -1,0 +1,94 @@
+<div class="col-md-12">
+	<div class="row">
+		<div class="col-sm-12 mb-2">
+			<div class="row">
+				<div class="col-md-12 p-5 bg-light border shadow-sm">
+					<h4>Add your Fab Lab <small class="text-muted"></small> </h4>
+					<p class="lead">
+						Please add your Fab Lab so we can match your place with potentially interested Designers you could meet and
+						work with to a list of designs selected according to your facilities.</p>
+					<hr>
+
+					<form action="/workshops/new" method="POST">
+
+						<div class="form-row">
+							<div class="col my-2">
+								<input type="text" name="name" value="{{previousFormInput.name}}" class="form-control"
+									placeholder="Fab Lab Name *" minlength="3" maxlength="64" required>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="col my-2">
+								<input type="text" name="streetAddress" value="" class="form-control" placeholder="Street *"
+									minlength="1" maxlength="256" required>
+							</div>
+
+							<div class="col my-2">
+								<input type="text" name="city" value="" class="form-control" placeholder="City" minlength="1"
+									maxlength="32" required>
+							</div>
+
+							<div class="col my-2">
+								<input type="text" name="zipCode" value="" class="form-control" placeholder="Zip Code *" minlength="1"
+									maxlength="16" required>
+							</div>
+
+							<div class="col my-2">
+								<input type="text" name="country" value="" class="form-control" placeholder="Country *" minlength="1"
+									maxlength="64" required>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="col my-2">
+								<input type="text" name="email" value="" class="form-control" placeholder="Contact email *"
+									minlenghth="1" maxlength="254" required>
+							</div>
+
+							<div class="col my-2">
+								<input type="text" name="phoneNum" value="" class="form-control" placeholder="Phone Number *"
+									minlength="8" maxlength="64" required>
+							</div>
+						</div>
+
+						<div class="form-row">
+							<div class="col-sm-12 my-2">
+								<textarea type="text" name="description" value="{{previousFormInput.description}}" class="form-control"
+									rows="6"
+									placeholder="A short story about your Fab Lab, it's team and their skillset. 1200 caracters max *"></textarea>
+							</div>
+						</div>
+
+						<div class="form-row d-flex justify-content-between align-items-end">
+							<div class="col-sm-3 my-2">
+								<select multiple required class="form-control" id="manufacturer-select-availableProcess"
+									name="availableProcess" size="8">
+									<option value="" class="text-muted" disabled>Technologies *</option>
+									<option value="cutting" class="text-dark" selected>Cutting</option>
+									<option value="drilling" class="text-dark">Drilling</option>
+									<option value="engraving" class="text-dark">Engraving</option>
+									<option value="heating" class="text-dark">Heating</option>
+									<option value="milling" class="text-dark">Milling</option>
+									<option value="printing" class="text-dark">Printing</option>
+									<option value="wielding" class="text-dark">Wielding</option>
+								</select>
+							</div>
+
+							<div class="col-sm-6 my-2  d-flex align-items-center">
+								<input type="file" class="custom-file-input btn-default" id="inputGroupFile01" name="file">
+								<label class="custom-file-label text-muted" for="inputGroupFile01"> <i class="fa fa-file-pdf-o pr-1"
+										aria-hidden="true"></i> Your fab Lab brochure</label>
+							</div>
+						</div>
+						<hr>
+
+						<button class="btn btn-success btn mt-2">Submit !</button>
+
+				</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+</div>

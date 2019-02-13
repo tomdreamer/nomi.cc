@@ -5,11 +5,13 @@ require("dotenv").config();
 const mongoose = require("mongoose");
 const User = require("../models/user-model");
 const Furniture = require("../models/furniture-model");
+const Manufacturer = require("../models/manufacturer-model");
 const bcrypt = require("bcrypt");
 
 // fake data
 const userData = require("./users.json");
 const furnitureData = require("./furnitures.json");
+const manufacturerData = require("./manufacturers.json");
 
 mongoose
 	.connect("mongodb://localhost/nomi", {
@@ -86,6 +88,14 @@ Furniture.create(furnitureData)
 		console.log("Chairs are flying..something is wrong 💩", err);
 	});
 
+Manufacturer.create(manufacturerData)
+	.then(data => {
+		console.log("🌟", manufacturerData.length, "fab labs were added.");
+	})
+	.catch(err => {
+		console.log("Drills are singing..something is wrong 💩", err);
+	});
+
 // TEMPLATES
 
 // USER
@@ -121,9 +131,37 @@ Furniture.create(furnitureData)
 // 		},
 // 		stdPrice: '{{integer(199, 2500)}}',
 // 		pictures: {
-// 			url: ['https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg&text=Picture+1', 'https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg&text=Picture+2', 'https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg&text=Picture+3', 'https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg&text=Picture+4']
+// 			url: ['https://dummyimage.com/1920x1080/aed6ce/ffffff.jpg', 'https://dummyimage.com/1920x1080/d4aeae/ffffff.jpg', 'https://dummyimage.com/1920x1080/aeb3d4/ffffff.jpg', 'https://dummyimage.com/1920x1080/d4c9ae/ffffff.jpg']
 // 		},
 // 		material: '{{random("wood", "copper", "steel", "fiber", "cloth")}}',
 // 		isActive: '{{bool()}}'
+// 	}
+// ]
+
+// MANUFACTURERS
+// [
+// 	"{{repeat(128, 128)}}",
+// 	{
+// 		name: "{{city()}} {{random(\"Lab\", \"FabLab\", \"Fabric\")}}",
+// 		address: {
+// 			streetAddress: "{{integer(1, 115)}} {{street()}}",
+// 			city: "{{city()}}",
+// 			zipCode: "{{integer(10000, 99999)}}",
+// 			country: "{{country()}}"
+// 		},
+// 		description: "{{lorem(2, \"paragraphs\")}}",
+// 		email: "{{email()}}",
+// 		phoneNum: "+1 {{phone()}}",
+// 		position: {
+// 			latitude: "{{floating(-90.000001, 90)}}",
+// 			longitude: "{{floating(-180.000001, 180)}}"
+// 		},
+// 		pictures: ["https://dummyimage.com/1920x1080/323cc7/a3a3a3.jpg", "https://dummyimage.com/1920x1080/c73434/a3a3a3.jpg", "https://dummyimage.com/1920x1080/36b8c7/a3a3a3.jpg", "https://dummyimage.com/1920x1080/c9b042/a3a3a3.jpg"],
+// 		isActive: "{{bool()}}",
+// 		availableProcess: [
+// 			"{{random(\"cutting\", \"drilling\", \"engraving\")}}",
+// 			"{{random(\"wielding\", \"milling\", \"milling\")}}",
+// 			"{{random(\"heating\", \"printing\", \"printing\")}}"
+// 		]
 // 	}
 // ]
