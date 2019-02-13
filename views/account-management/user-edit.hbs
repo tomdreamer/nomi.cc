@@ -5,7 +5,7 @@
 				<h1 class="entry-title"><span>User Editing</span> </h1>
 				<hr>
 				<!-- NEED enctype="multipart/form-data" for UPLOAD FILES-->
-				<form action="/book/{{userItem._id}}/process-edit" class="form-horizontal" method="POST" name="signup" id="signup"
+				<form action="/user/{{userItem._id}}/process-edit" class="form-horizontal" method="POST" name="signup" id="signup"
 					enctype="multipart/form-data">
           <h3>Creators informations:</h3>
           <div class="form-group">
@@ -37,7 +37,7 @@
 							<div class="input-group">
 								<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 								<input type="password" class="form-control" name="originalPassword" id="originalPassword"
-									placeholder="Choose password (5-15 chars)" value="{{userItem.password}}">
+									placeholder="Choose password (5-15 chars)" value="">
 							</div>
 						</div>
 					</div>
@@ -71,7 +71,7 @@
 							</div>
 						</div>
 					</div>
-					<h4>Adress</h4>
+					<h4>Address</h4>
 					<div class="col-md-6">
 						<div class="form-group">
 							<label class="control-label">Street Adress</label>
@@ -121,6 +121,9 @@
 					<div class="form-group">
 						<div class="col-xs-offset-3 col-xs-10">
 							<input name="Submit" type="submit" value="Uptdate infos" class="btn btn-primary">
+              <a class="btn btn-outline-danger ml-2" href="/furnitures/{{userItem._id}}/delete"
+
+                            onclick="return confirm('Are you sure?')">Delete <i class="fa fa-remove"></i></a>
 						</div>
 					</div>
 				</form>
