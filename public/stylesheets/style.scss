@@ -99,6 +99,8 @@ body {
     }
   }
 }
+
+/* TABLES */
 table.dataTable thead .sorting:after,
 table.dataTable thead .sorting:before,
 table.dataTable thead .sorting_asc:after,
@@ -109,8 +111,10 @@ table.dataTable thead .sorting_desc:after,
 table.dataTable thead .sorting_desc:before,
 table.dataTable thead .sorting_desc_disabled:after,
 table.dataTable thead .sorting_desc_disabled:before {
-  bottom: .5em;
+  bottom: 0.5em;
 }
-*, *::before, *::after {
-   box-sizing: content-box ; 
-}
+
+/* it breaks bootstrap grid utilities... */
+// *, *::before, *::after {
+//    box-sizing: content-box ;
+// }

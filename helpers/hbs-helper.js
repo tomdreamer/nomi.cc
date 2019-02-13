@@ -42,8 +42,29 @@ hbs.registerHelper("capitalize", function(string) {
 	return string.charAt(0).toUpperCase() + string.slice(1);
 });
 
+// put set value for a HTML5 select item {{optionSelectArray array string}}
+hbs.registerHelper("optionSelectArray", function(array, string) {
+	if (array.indexOf(string) > -1) {
+		return `value="${string}" selected`;
+		// NIZARFIXME https://stackoverflow.com/a/10654345 see edit furniture form html
+	}
+	return "";
+});
+
+// Convert boolean to check/ed  HTML5 {{ booleanToCheck boolean }}
+hbs.registerHelper("booleanToCheck", function(boolean) {
+	if (!boolean) {
+		let str = " value=\"off\"";
+		return str;
+	}
+	let str = " value=\"on\" checked";
+	return str;
+
+	// NIZARFIXME https://stackoverflow.com/a/10654345
+});
+
 // show only user first character {{firsCharOnly string}}
-hbs.registerHelper("firsCharOnly", function(input) {
+hbs.registerHelper("firstCharOnly", function(input) {
 	//
 	// with a return..
 });

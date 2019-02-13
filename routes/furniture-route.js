@@ -61,142 +61,163 @@ router.get("/furnitures/category/:stringType", (req, res, next) => {
 		.catch(err => next(err));
 });
 
-// /* Book New Process */
-// router.post('/books/new', (req, res, next) => {
-// 	const {
-// 		title,
-// 		author,
-// 		description,
-// 		rating,
-// 		isbn
-// 	} = req.body;
+/* Furniture New (process) */
+router.post("/furnitures/new", (req, res, next) => {
+	const {
+		name,
+		width,
+		height,
+		depth,
+		description,
+		material,
+		type,
+		file
+	} = req.body;
 
-// 	//	res.send(req.body); hardcode
+	const serialNumber = "037544f3-aebf-45c5-a8c9-107457712a6f";
+	// TODO add SKU generator to handle delivries
+	// https://www.npmjs.com/package/jsbarcode
 
-// 	// create a new book instance
-// 	const newBook = new Book({
-// 		title,
-// 		author,
-// 		description,
-// 		rating,
-// 		isbn
-// 	});
+	// validation and error detail TODO LATER
+	// add express-validator https://stackoverflow.com/q/46906876
+	// preserve first user input on error
+	const userInput = {
+		name: req.body.name,
+		width: req.body.width,
+		height: req.body.height,
+		depth: req.body.depth,
+		description: req.body.description,
+		material: req.body.material,
+		type: req.body.type
+	};
 
-// 	// save it
-// 	newBook.save()
-// 		.then((book) => {
-// 			console.log("Book has been saved 📚", book);
-// 			res.redirect('/books'); // redirect to books index
-// 			//res.redirect(`/book/${book._id}`); redirect to new book
+	Furniture.findOne({ name: name })
+		.then(queryResult => {
+			req.flash(
+				"danger",
+				`A design called ${queryResult.name}  already exists`
+			);
+			res.redirect("/furnitures/add");
+		})
 
-// 		})
-// 		.catch((error) => {
-// 			console.log(error);
-// 		});
-// });
+		.catch(err => next(err));
 
-// /* Book Edit */
-// router.get('/book/:bookId/edit', (req, res, next) => {
+	const newFurniture = new Furniture({
+		name,
+		serialNumber,
+		size: {
+			width,
+			height,
+			depth
+		},
+		material,
+		type,
+		description
+	});
 
-// 	const {
-// 		bookId
-// 	} = req.params;
+	newFurniture
+		.save()
+		.then(queryResult => {
+			console.log("Furniture has been saved 🛋");
+			res.redirect(`/furnitures/${queryResult._id}`);
+		})
+		.catch(error => {
+			// refill user form FIXME
+			res.locals.previousForm = userInput;
+			req.flash("danger", "Something went wrong..");
+			res.redirect("/furnitures/add");
 
-// 	Book.findById(bookId)
-// 		.then(queryResult => {
+			console.log(error);
+		});
+});
 
-// 			res.locals.bookItem = queryResult;
-// 			res.render('book-edit');
-// 		})
+/* Furniture Edit */
+router.get("/furnitures/:furnitureId/edit", (req, res, next) => {
+	const { furnitureId } = req.params;
 
-// 		.catch(err => next(err));
-// });
+	Furniture.findById(furnitureId)
+		.then(queryResult => {
+			res.locals.furnitureItem = queryResult;
+			console.log(queryResult);
+			res.render("./furniture/edit");
+		})
 
-// /* Book Update Process */
-// router.post('/book/:bookId/update', (req, res, next) => {
-// 	//retrieve id from url param
-// 	const {
-// 		bookId
-// 	} = req.params;
+		.catch(err => next(err));
+});
 
-// 	// get the user input form data
-// 	const {
-// 		title,
-// 		author,
-// 		description,
-// 		rating,
-// 		isbn
-// 	} = req.body;
+/* Furniture Update (process) */
+router.post("/furnitures/:furnitureId/update", (req, res, next) => {
+	//retrieve id from url param
+	const { furnitureId } = req.params;
 
-// 	// check user input
-// 	//	res.send(req.body);
+	// get the user input form data
+	const {
+		name,
+		width,
+		height,
+		depth,
+		description,
+		material,
+		type,
+		stdPrice
+	} = req.body;
 
-// 	// 3 args : id, changes and settings
-// 	Book.findByIdAndUpdate(bookId, {
-// 			$set: {
-// 				title,
-// 				author,
-// 				description,
-// 				rating,
-// 				isbn
-// 			}
-// 		}, {
-// 			runValidators: true
-// 		}) // so mongoose keep enforcing schema
+	let { isActive } = req.body;
 
-// 		.then((queryResult) => {
-// 			console.log("Book has been updated 📚");
-// 			res.redirect(`/book/${queryResult._id}`);
-// 		})
-// 		.catch((error) => {
-// 			console.log(error);
-// 		});
-// });
+	if (isActive === "on") {
+		isActive = true;
+	} else {
+		isActive = false;
+	}
 
-// /* Book Remove */
-// router.get('/book/:bookId/delete', (req, res, next) => {
+	Furniture.findByIdAndUpdate(
+		furnitureId,
+		{
+			$set: {
+				name,
+				size: {
+					width,
+					height,
+					depth
+				},
+				material,
+				type,
+				description,
+				stdPrice,
+				isActive
+			}
+		},
+		{
+			runValidators: true
+		}
+	)
+		.then(queryResult => {
+			console.log("Furniture has been updated 🔥");
+			req.flash(
+				"success",
+				`<bold>${queryResult.name}</bold> has been succuessfuly udpated !`
+			);
 
-// 	const {
-// 		bookId
-// 	} = req.params;
+			res.redirect(`/furnitures/${queryResult._id}`);
+		})
+		.catch(error => {
+			console.log(error);
+			req.flash("danger", `${error.message}`);
+			res.redirect(`/furnitures/${req.params.furnitureId}/edit`);
+		});
+});
 
-// 	Book.findByIdAndRemove(bookId)
-// 		.then(queryResult => {
-// 			console.log("Book has been destroyed ❌", queryResult);
-// 			res.redirect('/books');
-// 		})
+// /* Furniture Remove */
+router.get("/furnitures/:furnitureId/delete", (req, res, next) => {
+	const { furnitureId } = req.params;
 
-// 		.catch(err => next(err));
-// });
+	Furniture.findByIdAndRemove(furnitureId)
+		.then(queryResult => {
+			console.log("Furniture has been destroyed ❌", queryResult);
+			res.redirect("/furnitures");
+		})
 
-// /* Book Review Add */
-// router.post("/book/:bookId/process-review", (req, res, next) => {
-
-// 	const {
-// 		bookId_param
-// 	} = req.params;
-
-// 	const {
-// 		userFullName,
-// 		reviewText
-// 	} = req.body;
-
-// 	Book.findByIdAndUpdate(
-// 			bookId_param, {
-// 				$push: {
-// 					reviews: {
-// 						userFullName,
-// 						reviewText
-// 					}
-// 				}
-// 			}, {
-// 				runValidators: true
-// 			})
-// 		.then(queryResult => {
-// 			res.redirect(`/book/${queryResult._id}`)
-// 		})
-// 		.catch(err => next(err));
-
-// });
+		.catch(err => next(err));
+});
 
 module.exports = router;

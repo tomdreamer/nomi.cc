@@ -7,12 +7,14 @@
 		<div class="col-md-6">
 			<div class="furnitureItem-gallery w-50 h-25">
 				<div class="owl-carousel h-25">
-					{{#each this.pictures.url}}
-					<li><a href="#"><img src="{{this}}" alt="Product" class="product-thumbnail img-fluid"></a></li>
-					{{/each}}
+					<ul class="list-unstyled list-inline">
+						{{#each this.pictures.url}}
+						<li><a href="#"><img src="{{this}}" alt="Product" class="product-thumbnail img-fluid"></a></li>
+						{{/each}}
+					</ul>
 				</div>
 
-				<ul class="product-thumbnails d-none">
+				<ul class="product-thumbnails d-none list-unstyled">
 					{{#each this.pictures.url}}
 					<li><a href="#"><img src="{{this}}" alt="Product" class="product-thumbnail img-fluid"></a></li>
 					{{/each}}
@@ -74,8 +76,10 @@
 						<li><span class="text-dark text-medium">Category:</span> <a href="/furnitures/category/{{this.type}}"
 								class="navi-link">{{capitalize this.type}}</a></li>
 					</ul>
-					<div class="d-flex flex-wrap justify-content-between align-items-center"><a
-							class="btn btn-outline-secondary btn-sm" href="#">&nbsp;Save To Wishlist</a>
+					<div class="d-flex flex-wrap justify-content-around align-items-center">
+						<a class="btn btn-outline-secondary btn-sm" href="#">&nbsp;Save To Wishlist</a>
+						<a class="btn btn-outline-warning btn-sm" href="/furnitures/{{this._id}}/edit">&nbsp;Edit</a>
+
 						<div class="py-2">
 							<span class="d-inline-block align-middle text-sm text-muted mr-2">Share:</span>
 							<a class="text-muted mr-2" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
