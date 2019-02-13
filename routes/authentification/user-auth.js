@@ -216,7 +216,7 @@ router.post("/process-signUpCreators", fileUploader.single("pictureUpload"), (re
       if(!userDoc){
       // req.flash() sends by the "connect-flash" npm package
       //(it's defined by the "connect-flash" npm package)
-      req.flash("error", "Email is incorrect!");
+      req.flash("danger", "Email is incorrect!");
   
       res.redirect("/login");
       }
@@ -232,16 +232,9 @@ router.post("/process-signUpCreators", fileUploader.single("pictureUpload"), (re
         // use return to STOP the function here if the PASSWORD is BAD
         return;
       }
-      //email & password are CORRECT!
-      // if we are MANUALLY managed the user session
-      // req.session.userId = userDoc._id;
-  
-      // instead we'll use PASSPORT - an npm package for managing user sessions
-      // req.logIn() is a Passport method that calls serializeUser()
-      // (that )
+      
       req.logIn(userDoc, ()=>{
-        // req.flash() sends by the "connect-flash" npm package
-        //(it's defined by the "connect-flash" npm package)
+        
         req.flash("success", "Log in success!");
         res.redirect("/");
         })

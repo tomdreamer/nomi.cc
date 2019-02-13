@@ -1,0 +1,132 @@
+<div class="container">
+	<div class="row">
+		<div class="col-md-8">
+			<section>
+				<h1 class="entry-title"><span>User Editing</span> </h1>
+				<hr>
+				<!-- NEED enctype="multipart/form-data" for UPLOAD FILES-->
+				<form action="/user/{{userItem._id}}/process-edit" class="form-horizontal" method="POST" name="signup" id="signup"
+					enctype="multipart/form-data">
+          <h3>Creators informations:</h3>
+          <div class="form-group">
+            <div class="col-md-8 col-sm-9">
+              <label for="control-label col-sm-3">Select profil type</label>
+            <select name="role" class="form-control" id="control-label col-sm-3">
+              <option>designer</option>
+              <option>crafter</option>
+              </div>
+            </select>
+          </div>
+					
+					<div class="form-group">
+						<label class="control-label col-sm-3">Email <span class="text-danger">*</span></label>
+						<div class="col-md-8 col-sm-9">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+								<input type="email" class="form-control" name="email" id="email" placeholder="Enter your Email"
+									value="{{userItem.email}}">
+							</div>
+							<small> Your Email Id is being used for ensuring the security of your account, authorization and access
+								recovery. </small>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-3">Set Password <span class="text-danger">*</span></label>
+						<div class="col-md-5 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+								<input type="password" class="form-control" name="originalPassword" id="originalPassword"
+									placeholder="Choose password (5-15 chars)" value="">
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Name* <span class="text-danger">*</span></label>
+						<div class="col-md-8 col-sm-9">
+							<input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name here" value="{{userItem.name}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Surname* <span class="text-danger">*</span></label>
+						<div class="col-md-8 col-sm-9">
+							<input type="text" class="form-control" name="surname" id="surname" placeholder="Enter your Surname here"
+								value="{{userItem.surname}}">
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Company name*<span class="text-danger">*</span></label>
+						<div class="col-md-8 col-sm-9">
+							<input type="text" class="form-control" name="company" id="name" placeholder="Nomi" value="{{userItem.company}}">
+						</div>
+						<small> Nomi does'nt deal with students or non professional. If your are not in a company, you will be by default a frealancer. </small>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Contact No. <span class="text-danger">*</span></label>
+						<div class="col-md-5 col-sm-8">
+							<div class="input-group">
+								<span class="input-group-addon"><i class="fa fa-phone"></i></span>
+								<input type="text" class="form-control" name="phoneNum" id="phoneNum"
+									placeholder="Enter your Primary contact no." value="{{userItem.phoneNum}}">
+							</div>
+						</div>
+					</div>
+					<h4>Address</h4>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Street Adress</label>
+							<input maxlength="100" type="text" required="required" name="streetAdress" class="form-control"
+								placeholder="Enter Address" value="{{userItem.streetAdress}}"/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">City</label>
+							<input maxlength="40" type="text" required="required" name="city" class="form-control"
+								placeholder="Enter City" value="{{userItem.city}}"/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">ZIP</label>
+							<input maxlength="5" type="text" required="required" name="zipcode" class="form-control"
+								placeholder="Enter ZIP Code" value="{{userItem.zipcode}}"/>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="form-group">
+							<label class="control-label">Country</label>
+							<input maxlength="2" type="text" required="required" name="country" class="form-control"
+								placeholder="Enter State" value="{{userItem.country}}"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label class="control-label col-sm-3">Profile picture <br>
+							<small>(optional)</small></label>
+						<div class="col-md-5 col-sm-8">
+							<div class="input-group"> <span class="input-group-addon" id="file_upload"><i
+										class="glyphicon glyphicon-upload"></i></span>
+								<input type="file" name="pictureUpload" id="pictureUpload" class="form-control upload"
+									aria-describedby="file_upload" value="{{userItem.pictureUpload}}">
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-xs-offset-3 col-md-8 col-sm-9"><span class="text-muted"><span
+									class="label label-danger">Note:-</span> By clicking Sign Up, you agree to our <a href="#">Terms</a>
+								and that you have read our <a href="#">Policy</a>, including our <a href="#">Cookie Use</a>.</span>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="col-xs-offset-3 col-xs-10">
+							<input name="Submit" type="submit" value="Uptdate infos" class="btn btn-primary">
+              <a class="btn btn-outline-danger ml-2" href="/furnitures/{{userItem._id}}/delete"
+
+                            onclick="return confirm('Are you sure?')">Delete <i class="fa fa-remove"></i></a>
+						</div>
+					</div>
+				</form>
+		</div>
+	</div>
+</div>
