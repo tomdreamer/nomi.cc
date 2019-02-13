@@ -91,7 +91,10 @@ const manufacturerSchema = new Schema(
 		isActive: {
 			type: Boolean,
 			default: false
-		}
+		},
+		ownedManufacturers: [
+			{ type: Schema.Types.ObjectId, ref: "Manufacturer", required: true }
+		]
 	},
 	{
 		timestamps: true

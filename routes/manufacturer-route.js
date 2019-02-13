@@ -89,6 +89,25 @@ router.post("/workshops/new", (req, res, next) => {
 
 		.catch(err => next(err));
 
+	if (!req.user._id) {
+		req.flash(
+			"danger",
+			"Please login. If you're already logged and experciencing difficulties, please contact Nomi's team for help."
+		);
+
+		return res.redirect("/login");
+	}
+
+	if (req.user.role !== "crafter" && req.user.role !== "admin") {
+		req.flash(
+			"danger",
+			"You lack the rights to do that, if experciencing difficulties, please contact Nomi's team for help."
+		);
+		return res.redirect("/login");
+	}
+
+	let ownedManufacturers = req.user._id;
+
 	const newManufacturer = new Manufacturer({
 		name,
 		address: {
@@ -100,7 +119,8 @@ router.post("/workshops/new", (req, res, next) => {
 		description,
 		email,
 		phoneNum,
-		availableProcess
+		availableProcess,
+		ownedManufacturers
 	});
 
 	newManufacturer
@@ -139,7 +159,7 @@ router.get("/workshops/:manufacturerId/edit", (req, res, next) => {
 		.catch(err => next(err));
 });
 
-/* Furniture Update (process) */
+/* Manufacturer Update (process) */
 router.post("/workshops/:manufacturerId/update", (req, res, next) => {
 	//retrieve id from url param
 	const { manufacturerId } = req.params;
@@ -203,7 +223,7 @@ router.post("/workshops/:manufacturerId/update", (req, res, next) => {
 		});
 });
 
-// // /* Furniture Remove */
+/* Manufacturer Remove */
 router.get("/workshops/:manufacturerId/delete", (req, res, next) => {
 	const { manufacturerId } = req.params;
 
