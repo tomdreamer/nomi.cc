@@ -11,3 +11,6 @@ npm-debug.log
 public/stylesheets/style.css
 public/stylesheets/style.css.map
 .jshintrc
+
+# enforce git ignore  git rm --cached <file>
+# https://stackoverflow.com/a/39016176
