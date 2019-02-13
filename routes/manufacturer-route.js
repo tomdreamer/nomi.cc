@@ -43,181 +43,183 @@ router.get("/workshops/:manufacturerId", (req, res, next) => {
 		.catch(err => next(err));
 });
 
-// /* Furniture Show by Type */
-// router.get("/manufacturer/category/:stringType", (req, res, next) => {
-// 	const { stringType } = req.params;
-// 	Furniture.find({
-// 		type: stringType,
-// 		isActive: true
-// 	})
-// 		.limit(10)
-// 		.sort({ name: -1 })
-// 		.then(queryResult => {
-// 			res.locals.furnitureArray = queryResult;
-// 			res.locals.isShopping = true;
-// 			res.render("./furniture/index");
-// 		})
+/* Manufacturer Show by Type */
+router.get("/workshops/technique/:stringType", (req, res, next) => {
+	const { stringType } = req.params;
+	Manufacturer.find({
+		availableProcess: stringType,
+		isActive: true
+	})
+		.limit(10)
+		.sort({ name: 1 })
+		.then(queryResult => {
+			res.locals.manufacturerArray = queryResult;
+			res.locals.isSearchingPlace = true;
+			res.render("./manufacturer/index");
+		})
 
-// 		.catch(err => next(err));
-// });
+		.catch(err => next(err));
+});
 
-// /* Furniture New (process) */
-// router.post("/furnitures/new", (req, res, next) => {
-// 	const {
-// 		name,
-// 		width,
-// 		height,
-// 		depth,
-// 		description,
-// 		material,
-// 		type,
-// 		file
-// 	} = req.body;
+/* Manufacturer New (process) */
+router.post("/workshops/new", (req, res, next) => {
+	const {
+		name,
+		streetAddress,
+		city,
+		zipCode,
+		country,
+		email,
+		phoneNum,
+		description,
+		availableProcess,
+		files
+	} = req.body;
 
-// 	const serialNumber = "037544f3-aebf-45c5-a8c9-107457712a6f";
-// 	// TODO add SKU generator to handle delivries
-// 	// https://www.npmjs.com/package/jsbarcode
+	//	res.json(req.body);
 
-// 	// validation and error detail TODO LATER
-// 	// add express-validator https://stackoverflow.com/q/46906876
-// 	// preserve first user input on error
-// 	const userInput = {
-// 		name: req.body.name,
-// 		width: req.body.width,
-// 		height: req.body.height,
-// 		depth: req.body.depth,
-// 		description: req.body.description,
-// 		material: req.body.material,
-// 		type: req.body.type
-// 	};
+	Manufacturer.findOne({ name: name })
+		.then(queryResult => {
+			req.flash(
+				"danger",
+				`A Fab Lab called ${queryResult.name}  already exists`
+			);
+			res.redirect("/workshops/add");
+		})
 
-// 	Furniture.findOne({ name: name })
-// 		.then(queryResult => {
-// 			req.flash(
-// 				"danger",
-// 				`A design called ${queryResult.name}  already exists`
-// 			);
-// 			res.redirect("/furnitures/add");
-// 		})
+		.catch(err => next(err));
 
-// 		.catch(err => next(err));
+	const newManufacturer = new Manufacturer({
+		name,
+		address: {
+			streetAddress,
+			city,
+			zipCode,
+			country
+		},
+		description,
+		email,
+		phoneNum,
+		availableProcess
+	});
 
-// 	const newFurniture = new Furniture({
-// 		name,
-// 		serialNumber,
-// 		size: {
-// 			width,
-// 			height,
-// 			depth
-// 		},
-// 		material,
-// 		type,
-// 		description
-// 	});
+	newManufacturer
+		.save()
+		.then(queryResult => {
+			console.log("Manufacturer has been saved ⚙️");
+			req.flash(
+				"success",
+				"Your Fab Lab has been registred, you will receive our feedback soon !"
+			);
+			res.redirect(`/workshops/${queryResult._id}`);
+		})
+		.catch(error => {
+			res.locals.previousForm = userInput;
+			req.flash(
+				"danger",
+				"Something went wrong during the registration process, please, try again."
+			);
+			res.redirect("/workshops/add");
 
-// 	newFurniture
-// 		.save()
-// 		.then(queryResult => {
-// 			console.log("Furniture has been saved 🛋");
-// 			res.redirect(`/furnitures/${queryResult._id}`);
-// 		})
-// 		.catch(error => {
-// 			// refill user form FIXME
-// 			res.locals.previousForm = userInput;
-// 			req.flash("danger", "Something went wrong..");
-// 			res.redirect("/furnitures/add");
+			console.log(error);
+		});
+});
 
-// 			console.log(error);
-// 		});
-// });
+/* Manufacturer Edit */
+router.get("/workshops/:manufacturerId/edit", (req, res, next) => {
+	const { manufacturerId } = req.params;
 
-// /* Furniture Edit */
-// router.get("/furnitures/:furnitureId/edit", (req, res, next) => {
-// 	const { furnitureId } = req.params;
+	Manufacturer.findById(manufacturerId)
+		.then(queryResult => {
+			res.locals.manufacturerItem = queryResult;
+			console.log(queryResult);
+			res.render("./manufacturer/edit");
+		})
 
-// 	Furniture.findById(furnitureId)
-// 		.then(queryResult => {
-// 			res.locals.furnitureItem = queryResult;
-// 			console.log(queryResult);
-// 			res.render("./furniture/edit");
-// 		})
+		.catch(err => next(err));
+});
 
-// 		.catch(err => next(err));
-// });
+/* Furniture Update (process) */
+router.post("/workshops/:manufacturerId/update", (req, res, next) => {
+	//retrieve id from url param
+	const { manufacturerId } = req.params;
 
-// /* Furniture Update (process) */
-// router.post("/furnitures/:furnitureId/update", (req, res, next) => {
-// 	//retrieve id from url param
-// 	const { furnitureId } = req.params;
+	// get the user input form data
+	const {
+		name,
+		streetAddress,
+		city,
+		zipCode,
+		country,
+		email,
+		phoneNum,
+		description,
+		availableProcess
+	} = req.body;
 
-// 	// get the user input form data
-// 	const {
-// 		name,
-// 		width,
-// 		height,
-// 		depth,
-// 		description,
-// 		material,
-// 		type,
-// 		stdPrice
-// 	} = req.body;
+	let { isActive } = req.body;
 
-// 	let { isActive } = req.body;
+	if (isActive === "on") {
+		isActive = true;
+	} else {
+		isActive = false;
+	}
 
-// 	if (isActive === "on") {
-// 		isActive = true;
-// 	} else {
-// 		isActive = false;
-// 	}
+	Manufacturer.findByIdAndUpdate(
+		manufacturerId,
+		{
+			$set: {
+				name,
+				address: {
+					streetAddress,
+					city,
+					zipCode,
+					country
+				},
+				description,
+				email,
+				phoneNum,
+				availableProcess,
+				isActive
+			}
+		},
+		{
+			runValidators: true
+		}
+	)
+		.then(queryResult => {
+			console.log("Fab Lab has been updated 🔥");
+			req.flash(
+				"success",
+				`<bold>${queryResult.name}</bold> has been succuessfuly udpated !`
+			);
 
-// 	Furniture.findByIdAndUpdate(
-// 		furnitureId,
-// 		{
-// 			$set: {
-// 				name,
-// 				size: {
-// 					width,
-// 					height,
-// 					depth
-// 				},
-// 				material,
-// 				type,
-// 				description,
-// 				stdPrice,
-// 				isActive
-// 			}
-// 		},
-// 		{
-// 			runValidators: true
-// 		}
-// 	)
-// 		.then(queryResult => {
-// 			console.log("Furniture has been updated 🔥");
-// 			req.flash(
-// 				"success",
-// 				`<bold>${queryResult.name}</bold> has been succuessfuly udpated !`
-// 			);
-
-// 			res.redirect(`/furnitures/${queryResult._id}`);
-// 		})
-// 		.catch(error => {
-// 			console.log(error);
-// 			req.flash("danger", `${error.message}`);
-// 			res.redirect(`/furnitures/${req.params.furnitureId}/edit`);
-// 		});
-// });
+			res.redirect(`/workshops/${queryResult._id}`);
+		})
+		.catch(error => {
+			console.log(error);
+			req.flash("danger", `${error.message}`);
+			res.redirect(`/workshops/${req.params.furnitureId}/edit`);
+		});
+});
 
 // // /* Furniture Remove */
-// router.get("/furnitures/:furnitureId/delete", (req, res, next) => {
-// 	const { furnitureId } = req.params;
+router.get("/workshops/:manufacturerId/delete", (req, res, next) => {
+	const { manufacturerId } = req.params;
 
-// 	Furniture.findByIdAndRemove(furnitureId)
-// 		.then(queryResult => {
-// 			console.log("Furniture has been destroyed ❌", queryResult);
-// 			res.redirect("/furnitures");
-// 		})
+	Manufacturer.findByIdAndRemove(manufacturerId)
+		.then(queryResult => {
+			console.log("Manufacturer has been destroyed ❌", queryResult);
+			req.flash(
+				"info",
+				`${queryResult.name} has been succuessfuly destroyed !`
+				// FIXME output raw html as text
+			);
 
-// 		.catch(err => next(err));
-// });
+			res.redirect("/workshops");
+		})
+
+		.catch(err => next(err));
+});
 
 module.exports = router;
