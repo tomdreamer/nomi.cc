@@ -3,6 +3,7 @@ const bcrypt = require("bcrypt");
 
 const User = require("../../models/user-model.js");
 const Furniture = require("../../models/furniture-model");
+const Manufacturer = require("../../models/manufacturer-model");
 
 const fileUploader = require("../../config/file-upload.js");
 
@@ -248,19 +249,28 @@ router.get("/signout", (req, res, next) => {
 });
 
 //--------------------------------------------------------------------------------------------
-//Designers dashboard
+// dashboards for designers and crafters
 //--------------------------------------------------------------------------------------------
 
 /*Dashboard that present's when you log in depending on your role */
 router.get("/dashboard", (req, res, next) => {
-	console.log(Furniture.find({ ownerOfDesign: { $eq: req.user._id } }));
-	console.log(req.user.role === "designer");
+	
 	if (req.user.role === "designer") {
-		Furniture.find({ ownerOfDesign: { $eq: req.user._id } })
+		Furniture.find({ creator: { $eq: req.user._id } })
 			.sort({ rating: -1 })
 			.then(queryResults => {
 				res.locals.furnitureArray = queryResults;
-				res.render("auth-views/user-creators-dashboard.hbs");
+				res.render("auth-views/user-designer-dashboard.hbs");
+			})
+			// catch next(err) skip straight to error
+			.catch(err => next(err));
+	}
+	if (req.user.role === "crafter") {
+		Manufacturer.find({ creator: { $eq: req.user._id } })
+			.sort({ rating: -1 })
+			.then(queryResults => {
+				res.locals.manufacturerArray = queryResults;
+				res.render("auth-views/user-crafter-dashboard.hbs");
 			})
 			// catch next(err) skip straight to error
 			.catch(err => next(err));
