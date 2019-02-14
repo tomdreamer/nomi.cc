@@ -8,8 +8,8 @@ npm-debug.log
 .env
 
 # sass generated css
-public/stylesheets/style.css
-public/stylesheets/style.css.map
+#public/stylesheets/style.css
+#public/stylesheets/style.css.map
 .jshintrc
 
 # enforce git ignore  git rm --cached <file>

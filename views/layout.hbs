@@ -30,6 +30,10 @@
 	{{> layout_navbar_furniture}}
 	{{/if}}
 
+	{{#if isSearchingPlace}}
+	{{> layout_navbar_manufacturer}}
+	{{/if}}
+
 	<section class="main">
 		<div class="container py-4">
 			{{>layout_flash_message}}
@@ -47,12 +51,11 @@
 		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
 		crossorigin="anonymous"></script>
 
-		{{!-- owl Carousel 2 --}}
+	{{!-- owl Carousel 2 --}}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-	<script src="dist/js/bootstrap-checkbox.js" defer></script>
-		<!-- dataTables package: able you to sort, searh... tables -->
-		<script  src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
-		<script  src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
+	<!-- dataTables package: able you to sort, searh... tables -->
+	<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/1.10.19/js/dataTables.bootstrap4.min.js"></script>
 </body>
 
 </html>
