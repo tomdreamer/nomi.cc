@@ -114,7 +114,18 @@ table.dataTable thead .sorting_desc_disabled:before {
   bottom: 0.5em;
 }
 
-/* it breaks bootstrap grid utilities... */
-// *, *::before, *::after {
-//    box-sizing: content-box ;
-// }
+// Item show parrallax
+.show-workshop-details {
+  background: url("https://dummyimage.com/1920x1080/dedede/f2f2f2&text=Big+img")
+    no-repeat center center;
+  height: 450px; /* must be same as jumbotron */
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.show-workshop-details + div {
+  height: 450px;
+  text-shadow: #444 0 1px 1px;
+  background: transparent;
+}

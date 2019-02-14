@@ -1,33 +1,56 @@
-<div class=" pb-4 p-3">
+{{#with manufacturerItem}}
+<div class="show-workshop-details w-100 position-fixed"></div>
+<div class="jumbotron text-light">
+	<h1>{{this.name}}</h1>
+	<p class="lead text-muted mt-4"><i class="fa fa-map-marker"></i> {{this.address.city}}, {{this.address.country}}. <br>
+		{{this.address.streetAddress}}
+		{{this.address.zipCode}} <br> {{this.phoneNum}}</p>
+</div>
+
+<div class="container">
 	<div class="row">
+		<h2>Presentation</h2>
+		{{this.description}}
+	</div>
+	<hr>
+	<div class="row">
+		<h2>Page Content</h2>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+		Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+		dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+		Aliquam in felis sit amet augue.
+		<h2>Available</h2>
+		Cupidatat veniam dolor culpa nisi est enim sint occaecat aute minim est consequat nulla adipisicing. Quis ex Lorem
+		dolore consectetur qui amet labore cillum.
+		<br>
+		<ul class="list-unstyled">
+			{{#each this.availableProcess}}
+			<li>- {{this}}</li>
+			{{/each}}
+		</ul>
+	</div>
 
-		{{#with manufacturerItem}}
+	<hr>
 
-		{{!-- furniture gallery TODO owlcarousel --}}
-		<div class="col-md-6">
-			<div class="manufacturerItem-gallery w-50 h-25">
-				<div class="owl-carousel h-25">
-					<ul class="list-unstyled list-inline">
-						{{#each this.pictures}}
-						<li><a href="#"><img src="{{this}}" alt="Product" class="product-thumbnail img-fluid"></a></li>
-						{{/each}}
-					</ul>
-				</div>
+	<div class="row">
+		<h2>Location</h2>
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis pharetra varius quam sit amet vulputate.
+		Quisque mauris augue, molestie tincidunt condimentum vitae, gravida a libero. Aenean sit amet felis
+		dolor, in sagittis nisi. Sed ac orci quis tortor imperdiet venenatis. Duis elementum auctor accumsan.
+		Aliquam in felis sit amet augue.
+	</div>
+</div>
 
-				<ul class="product-thumbnails d-none list-unstyled">
-					{{#each this.pictures}}
-					<li><a href="#"><img src="{{this}}" alt="Product" class="product-thumbnail img-fluid"></a></li>
-					{{/each}}
-				</ul>
+<hr>
 
-			</div>
+<div class="container">
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<p>The End.</p>
 		</div>
-
-		{{!-- furniture card --}}
-		<div class="col-md-6">
-			<div class="card border-default bg-white pt-2 shadow-sm">
-				<div class="card-body">
-					<h2 class="mb-3">{{this.name}}</h2>
+	</div>
+</div>
+{{!-- <h2 class="mb-3">{{this.name}}</h2>
 					<h3 class="text-normal"> ${{this.phoneNum}}</h3>
 					<p class="text-sm text-muted">{{this.description}}</p>
 					<p class="text-sm text-muted">
@@ -38,20 +61,5 @@
 							{{/each}}
 						</ul>
 					</p>
-					<div class="d-flex flex-wrap justify-content-around align-items-center">
-						<a class="btn btn-outline-warning btn-sm" href="/workshops/{{this._id}}/edit">&nbsp;Edit</a>
-						<div class="py-2">
-							<span class="d-inline-block align-middle text-sm text-muted mr-2">Share:</span>
-							<a class="text-muted mr-2" href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-							<a class="text-muted mr-2" href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-							<a class="text-muted mr-2" href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-							<a class="text-muted mr-2" href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		{{/with}}
-	</div>
-</div>
+						<a class="btn btn-outline-warning btn-sm" href="/workshops/{{this._id}}/edit">&nbsp;Edit</a> --}}
+{{/with}}

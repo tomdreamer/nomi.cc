@@ -36,7 +36,6 @@ router.get("/workshops/:manufacturerId", (req, res, next) => {
 	Manufacturer.findById(manufacturerId)
 		.then(queryResult => {
 			res.locals.manufacturerItem = queryResult;
-			res.locals.isSearchingPlace = true;
 			res.render("./manufacturer/show");
 		})
 
@@ -161,10 +160,8 @@ router.get("/workshops/:manufacturerId/edit", (req, res, next) => {
 
 /* Manufacturer Update (process) */
 router.post("/workshops/:manufacturerId/update", (req, res, next) => {
-	//retrieve id from url param
 	const { manufacturerId } = req.params;
 
-	// get the user input form data
 	const {
 		name,
 		streetAddress,
