@@ -48,7 +48,8 @@ const furnitureSchema = new Schema(
 			default: null
 		},
 		pictures: {
-			url: [String]
+			url: [String],
+			default: "https://dummyimage.com/1920x1080/cccccc/f2f2f2&text=Default"
 		},
 		material: [
 			{
