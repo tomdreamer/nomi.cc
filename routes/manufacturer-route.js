@@ -77,17 +77,6 @@ router.post("/workshops/new", (req, res, next) => {
 
 	//	res.json(req.body);
 
-	Manufacturer.findOne({ name: name })
-		.then(queryResult => {
-			req.flash(
-				"danger",
-				`A Fab Lab called ${queryResult.name}  already exists`
-			);
-			res.redirect("/workshops/add");
-		})
-
-		.catch(err => next(err));
-
 	if (!req.user._id) {
 		req.flash(
 			"danger",
@@ -105,7 +94,17 @@ router.post("/workshops/new", (req, res, next) => {
 		return res.redirect("/login");
 	}
 
-	let ownedManufacturers = req.user._id;
+	Manufacturer.findOne({ name: name })
+		.then(queryResult => {
+			req.flash(
+				"danger",
+				`A Fab Lab called ${queryResult.name}  already exists`
+			);
+			return res.redirect("/workshops/add");
+		})
+
+		.catch(err => next(err));
+	let creator = req.user._id;
 
 	const newManufacturer = new Manufacturer({
 		name,
@@ -119,7 +118,7 @@ router.post("/workshops/new", (req, res, next) => {
 		email,
 		phoneNum,
 		availableProcess,
-		ownedManufacturers
+		creator
 	});
 
 	newManufacturer
@@ -133,7 +132,6 @@ router.post("/workshops/new", (req, res, next) => {
 			res.redirect(`/workshops/${queryResult._id}`);
 		})
 		.catch(error => {
-			res.locals.previousForm = userInput;
 			req.flash(
 				"danger",
 				"Something went wrong during the registration process, please, try again."

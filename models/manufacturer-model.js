@@ -92,14 +92,11 @@ const manufacturerSchema = new Schema(
 			type: Boolean,
 			default: false
 		},
-		ownedManufacturers: [
-			{ type: Schema.Types.ObjectId, ref: "Manufacturer", required: true }
-		]
+		creator: { type: Schema.Types.ObjectId, ref: "User", required: true }
 	},
-	{
-		timestamps: true
-	}
-);
+ {
+	timestamps: true
+});
 
 const Manufacturer = mongoose.model("Manufacturer", manufacturerSchema);
 

@@ -7,6 +7,13 @@ const Furniture = require("../models/furniture-model");
 /* Furniture Add */
 router.get("/furnitures/add", (req, res, next) => {
 	res.render("./furniture/add");
+	if(!req.user){
+    req.flash("danger", "You must be login");
+    res.redirect("/login");
+    // use return to STOP the function here if you are NOT logged-in
+    return;
+  }
+	
 });
 
 /* GET Furnitures index  */
@@ -81,27 +88,38 @@ router.post("/furnitures/new", (req, res, next) => {
 	// validation and error detail TODO LATER
 	// add express-validator https://stackoverflow.com/q/46906876
 	// preserve first user input on error
-	const userInput = {
-		name: req.body.name,
-		width: req.body.width,
-		height: req.body.height,
-		depth: req.body.depth,
-		description: req.body.description,
-		material: req.body.material,
-		type: req.body.type
-	};
+
+	if (!req.user._id) {
+		req.flash(
+			"danger",
+			"Please login. If you're already logged and experciencing difficulties, please contact Nomi's team for help."
+		);
+
+		return res.redirect("/login");
+	}
+
+	if (req.user.role !== "designer" && req.user.role !== "admin") {
+		req.flash(
+			"danger",
+			"You lack the rights to do that, if experciencing difficulties, please contact Nomi's team for help."
+		);
+		return res.redirect("/login");
+	}
+
+	//const ownerOfDesign = req.user._id;
+	console.log(req.user);
 
 	Furniture.findOne({ name: name })
 		.then(queryResult => {
 			req.flash(
 				"danger",
-				`A design called ${queryResult.name}  already exists`
+				`A Furniture called ${queryResult.name}  already exists.`
 			);
-			res.redirect("/furnitures/add");
+			res.redirect("/dashboard");
 		})
 
 		.catch(err => next(err));
-
+		const ownerOfDesign = req.user._id;
 	const newFurniture = new Furniture({
 		name,
 		serialNumber,
@@ -112,22 +130,24 @@ router.post("/furnitures/new", (req, res, next) => {
 		},
 		material,
 		type,
-		description
+		description,
+		creator
 	});
 
 	newFurniture
 		.save()
 		.then(queryResult => {
-			console.log("Furniture has been saved 🛋");
+			req.flash(
+				"success",
+				"Your Design has been submitted, you will receive our feedback soon !"
+			);
 			res.redirect(`/furnitures/${queryResult._id}`);
 		})
 		.catch(error => {
 			// refill user form FIXME
-			res.locals.previousForm = userInput;
 			req.flash("danger", "Something went wrong..");
-			res.redirect("/furnitures/add");
-
 			console.log(error);
+			res.redirect("/furnitures/add");
 		});
 });
 

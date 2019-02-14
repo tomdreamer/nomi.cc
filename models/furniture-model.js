@@ -49,7 +49,7 @@ const furnitureSchema = new Schema(
 		},
 		pictures: {
 			url: [String],
-			default: "https://dummyimage.com/1920x1080/cccccc/f2f2f2&text=Default"
+			default: ["https://dummyimage.com/1920x1080/cccccc/f2f2f2&text=Default"]
 		},
 		material: [
 			{
@@ -61,7 +61,8 @@ const furnitureSchema = new Schema(
 		isActive: {
 			type: Boolean,
 			default: false
-		}
+		},
+		creator: { type: Schema.Types.ObjectId, ref: "User", required: true }
 	},
 	{
 		timestamps: true

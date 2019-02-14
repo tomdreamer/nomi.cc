@@ -1,23 +1,20 @@
 <div class="col-md-12">
 	<div class="row">
-		<div class="col-sm-12 mb-2">
+		<div class="col-sm-12 mb-2 border-bottom">
 			<a class="btn btn-success mb-2" href="/furnitures/add" role="button">Add furniture</a>
 		</div>
 	</div>
 	<div class="row">
 		{{#each furnitureArray}}
-		<div class="col-sm-4 p-0 border-right border-bottom">
-			<div class="py-3 rounded-0 m-2">
-				<a href="/furnitures/{{this._id}}" class="">
-					<img class="card-img-top" src="{{this.pictures.url.[1]}}" alt="Card image cap"
-						style="height: 200px; width: 100%; display: block;">
-				</a>
+		<div class="col-sm-4">
+			<div class="card">
+				<img class="card-img-top" src="{{this.pictures.url.[1]}}" alt="Card image cap"
+					style="height: 200px; width: 100%; display: block;">
 				<div class="card-body">
 					<h5 class="card-title"> {{this.name}} </h5>
 					<p class="card-text">${{this.stdPrice}}.00</p>
-					<p class="card-text"> {{truncate this.description 140}}</p>
+					<p class="card-text"> {{this.description}}</p>
 					<a href="/furnitures/{{this._id}}" class="btn btn-primary">See </a>
-					<p class="card-text"><small class="text-muted text-uppercase"> this.designer.name</small></p>
 				</div>
 			</div>
 		</div>

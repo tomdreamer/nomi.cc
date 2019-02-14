@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const addressSchema = new Schema({
-
 	streetAdress: {
 		type: String,
 		required: true,
@@ -12,10 +11,10 @@ const addressSchema = new Schema({
 	},
 	city: {
 		type: String,
-		required: true,
+		required: true
 	},
 	miscDetails: {
-		type: String,
+		type: String
 	},
 	zipcode: {
 		type: String,
@@ -24,8 +23,9 @@ const addressSchema = new Schema({
 		maxlength: 11
 	},
 	country: {
-		type: String,
+		type: String
 	},
+	creator: { type: Schema.Types.ObjectId, ref: "User", required: true }
 });
 
 const Address = mongoose.model("Address", addressSchema);
