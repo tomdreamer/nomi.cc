@@ -28,7 +28,6 @@
 			<div class="card border-default bg-white pt-2 shadow-sm">
 				<div class="card-body">
 					<h2 class="mb-3">{{this.name}}</h2>
-					<h3 class="text-normal"> ${{this.stdPrice}}.00</h3>
 					<p class="text-sm text-muted">{{this.description}}</p>
 					<div class="row">
 						<div class="col-sm-6">
@@ -50,30 +49,31 @@
 							</div>
 						</div>
 					</div>
-						
-					
+
+
 					<ul class="list-unstyled text-sm mb-4">
-						<li class="text-muted text-small">SKU: {{this.serialNumber}}</li>
 						<li><span class="text-dark text-medium">Category:</span> <a href="/furnitures/category/{{this.type}}"
 								class="navi-link">{{capitalize this.type}}</a></li>
 					</ul>
 					{{#if ../quote}}
-                    <a class="btn btn-outline-danger ml-2" href="/collaboration/{{../quote._id}}/delete"
-					onclick="return confirm('Are you sure you don't want to collaborate?')">Remove collab </a>
-                    {{else}}
-						<a class="btn btn-outline-success ml-2" href="/collaboration/{{this._id}}/check"
-					onclick="return confirm('Are you sure you want to participate to thit project?')">I want to collaborate! <i class="fas fa-thumbs-up"></i></a>
-                    {{/if}}
-						
-					</div>
+					<a class="btn btn-outline-danger ml-2" href="/collaboration/{{../quote._id}}/delete"
+						onclick="return confirm('Are you sure you don't want to collaborate?')">Remove collab </a>
+					{{else}}
+					<a class="btn btn-success ml-2" href="/collaboration/{{this._id}}/check"
+						onclick="return confirm('Are you sure you want to participate to thit project?')">I want to collaborate! <i
+							class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+					</a>
+					{{/if}}
+
 				</div>
-			
-		
+			</div>
 
-		{{/with}}
+
+
+			{{/with}}
+		</div>
 	</div>
-</div>
 
-<script>
-    
-</script>
+	<script>
+
+	</script>

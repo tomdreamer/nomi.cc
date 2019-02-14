@@ -9,12 +9,12 @@
 				<li class="nav-item"><a href="/furnitures" class="nav-link">Furnitures</a></li>
 				<li class="nav-item"><a href="/workshops" class="nav-link">Workshops</a></li>
 				{{#if currentUser}}
-<<<<<<< HEAD
 				<li class="nav-item"><a href="/dashboard" class="nav-link">My dashboard</a></li>
+
+				{{#if isCustomer}}
+				{{else}}
 				<li class="nav-item"><a href="/collaboration" class="nav-link">Collaboration propositions</a></li>
-=======
-				<li class="nav-item"><a href="/users" class="nav-link">Users</a></li>
->>>>>>> c48e95148492afe58bcb2aa6ebbbde2461d81a73
+				{{/if}}
 				{{/if}}
 			</ul>
 			<ul class="nav navbar-nav flex-row justify-content-between ml-auto">
