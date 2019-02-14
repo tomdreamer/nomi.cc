@@ -2,6 +2,7 @@ const express = require("express");
 const bcrypt = require("bcrypt");
 
 const User = require("../../models/user-model.js");
+const Furniture = require("../../models/furniture-model");
 
 const fileUploader = require("../../config/file-upload.js");
 
@@ -156,98 +157,114 @@ router.get("/signup/creators", (req, res, next) => {
 // depending on the number of files you upload you have to put:
 // single() for ONE file
 // or array() for MANY files  behind fileUploader
-router.post("/process-signUpCreators", fileUploader.single("pictureUpload"), (req, res, next)=>{
-    const {email, originalPassword, name, surname, phoneNum, role, company}= req.body;
-    //encrypt the user's password before saving
-    
-    const encryptedPassword =  bcrypt.hashSync(originalPassword, 10);
-    
-    console.log("file upload is Always in req.file OR req.files", req.file);
+router.post(
+	"/process-signUpCreators",
+	fileUploader.single("pictureUpload"),
+	(req, res, next) => {
+		const { email, originalPassword, name, surname, phoneNum, role } = req.body;
+		let { company } = req.body;
+		//encrypt the user's password before saving
 
-    let picture;
+		const encryptedPassword = bcrypt.hashSync(originalPassword, 10);
 
-    if(!company){
-      company = "freelancer";
-    }
-    if (req.file) {
-      picture = req.file.secure_url;
-    }
-    
-    User.findOne({email :{$eq: email} })
-    .then(userDoc => {
-      // redirect to login page if result is NULL (no account with the email)
-      if(userDoc){
-      // req.flash() sends by the "connect-flash" npm package
-      //(it's defined by the "connect-flash" npm package)
-      req.flash("danger", "Email already used! Try a an other one.");
-  
-      res.redirect("/creatorsSignup");
-      }
-    })
-    
-     //enforce password rules (can't be empty and MUST have a digit)    
-    if( !originalPassword || !originalPassword.match(/[0-9]/)){
-      
-      req.flash("danger", "Password can't be blank and must contain a number");
-      res.redirect("/creatorsSignup");  
-      return;
-    }
-      
-    if(name.length <= 2 || name.length >= 64) {
-      console.log("le nom est inf à 2", name);
-      req.flash("danger", "The name must be grater than 2 letters and smaller than 64");
-      res.redirect("/creatorsSignup");  
-      return;
-    } 
-  
-    if(!phoneNum.match(/((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))/)){
-      
-      req.flash("danger", "number must have one of these formats +33698912549, +33 6 79 91 25 49, +33-6-79-91-25-49, (555)-555-5555, 555-555-5555");
-      res.redirect("/creatorsSignup");  
-      return;
-    }
-    
-     User.create({email, encryptedPassword, name, surname, phoneNum, picture, role, company})
-     .then(()=>{
-      // req.flash() sends by the "connect-flash" npm package
-      //(it's defined by the "connect-flash" npm package)
-      req.flash("success", "Sign up success!");
-       // redirect to the HOME PAGE if the sign up WORKED
-       res.redirect("/");
-     })
-     .catch(err => next(err));
-  });
+		console.log("file upload is Always in req.file OR req.files", req.file);
 
-  
-  
+		let picture;
 
-  router.get("/signout", (req, res, next)=>{
-    //req.logOut() is a Passport method that removes the USER ID from the session
-    req.logOut();
-    req.flash("success", "Logged out successfully! ");
-    res.redirect("/");
-  })
+		if (!company) {
+			company = "freelancer";
+		}
+		if (req.file) {
+			picture = req.file.secure_url;
+		}
 
- //--------------------------------------------------------------------------------------------
+		User.findOne({ email: { $eq: email } }).then(userDoc => {
+			// redirect to login page if result is NULL (no account with the email)
+			if (userDoc) {
+				// req.flash() sends by the "connect-flash" npm package
+				//(it's defined by the "connect-flash" npm package)
+				req.flash("danger", "Email already used! Try a an other one.");
+
+				res.redirect("/creatorsSignup");
+			}
+		});
+
+		//enforce password rules (can't be empty and MUST have a digit)
+		if (!originalPassword || !originalPassword.match(/[0-9]/)) {
+			req.flash("danger", "Password can't be blank and must contain a number");
+			res.redirect("/creatorsSignup");
+			return;
+		}
+
+		if (name.length <= 2 || name.length >= 64) {
+			console.log("le nom est inf à 2", name);
+			req.flash(
+				"danger",
+				"The name must be grater than 2 letters and smaller than 64"
+			);
+			res.redirect("/creatorsSignup");
+			return;
+		}
+
+		if (
+			!phoneNum.match(
+				/((?:\+|00)[17](?: |\-)?|(?:\+|00)[1-9]\d{0,2}(?: |\-)?|(?:\+|00)1\-\d{3}(?: |\-)?)?(0\d|\([0-9]{3}\)|[1-9]{0,3})(?:((?: |\-)[0-9]{2}){4}|((?:[0-9]{2}){4})|((?: |\-)[0-9]{3}(?: |\-)[0-9]{4})|([0-9]{7}))/
+			)
+		) {
+			req.flash(
+				"danger",
+				"number must have one of these formats +33698912549, +33 6 79 91 25 49, +33-6-79-91-25-49, (555)-555-5555, 555-555-5555"
+			);
+			res.redirect("/creatorsSignup");
+			return;
+		}
+
+		User.create({
+			email,
+			encryptedPassword,
+			name,
+			surname,
+			phoneNum,
+			picture,
+			role,
+			company
+		})
+			.then(() => {
+				// req.flash() sends by the "connect-flash" npm package
+				//(it's defined by the "connect-flash" npm package)
+				req.flash("success", "Sign up success!");
+				// redirect to the HOME PAGE if the sign up WORKED
+				res.redirect("/");
+			})
+			.catch(err => next(err));
+	}
+);
+
+router.get("/signout", (req, res, next) => {
+	//req.logOut() is a Passport method that removes the USER ID from the session
+	req.logOut();
+	req.flash("success", "Logged out successfully! ");
+	res.redirect("/");
+});
+
+//--------------------------------------------------------------------------------------------
 //Designers dashboard
 //--------------------------------------------------------------------------------------------
 
 /*Dashboard that present's when you log in depending on your role */
-router.get("/dashboard", (req, res, next) =>{
-  
-  console.log(Furniture.find({ownerOfDesign: {$eq: req.user._id}}));
-  console.log(req.user.role==="designer");
-  if(req.user.role==="designer"){
-  	Furniture.find({ownerOfDesign: {$eq: req.user._id}})
-  		.sort({	rating: -1})
-  		.then(queryResults => {
-  			res.locals.furnitureArray = queryResults;
-  			res.render("auth-views/user-creators-dashboard.hbs");
-  		})
-  		// catch next(err) skip straight to error
-  		.catch(err => next(err));
-  	}
-  
-  });
-  
-  module.exports = router;
+router.get("/dashboard", (req, res, next) => {
+	console.log(Furniture.find({ ownerOfDesign: { $eq: req.user._id } }));
+	console.log(req.user.role === "designer");
+	if (req.user.role === "designer") {
+		Furniture.find({ ownerOfDesign: { $eq: req.user._id } })
+			.sort({ rating: -1 })
+			.then(queryResults => {
+				res.locals.furnitureArray = queryResults;
+				res.render("auth-views/user-creators-dashboard.hbs");
+			})
+			// catch next(err) skip straight to error
+			.catch(err => next(err));
+	}
+});
+
+module.exports = router;
