@@ -4,6 +4,8 @@ const router = express.Router();
 
 const Furniture = require("../models/furniture-model");
 
+const fileUploader = require("../config/file-upload.js");
+
 /* Furniture Add */
 router.get("/furnitures/add", (req, res, next) => {
 	res.render("./furniture/add");
@@ -69,7 +71,7 @@ router.get("/furnitures/category/:stringType", (req, res, next) => {
 });
 
 /* Furniture New (process) */
-router.post("/furnitures/new", (req, res, next) => {
+router.post("/furnitures/new", fileUploader.single("pictureUpload"), (req, res, next) => {
 	const {
 		name,
 		width,
@@ -81,6 +83,11 @@ router.post("/furnitures/new", (req, res, next) => {
 		file
 	} = req.body;
 
+	let pictures;
+
+		if (req.file) {
+			pictures = req.file.secure_url;
+		}
 	const serialNumber = "037544f3-aebf-45c5-a8c9-107457712a6f";
 	// TODO add SKU generator to handle delivries
 	// https://www.npmjs.com/package/jsbarcode
@@ -119,7 +126,7 @@ router.post("/furnitures/new", (req, res, next) => {
 		})
 
 		.catch(err => next(err));
-		const ownerOfDesign = req.user._id;
+		const creator = req.user._id;
 	const newFurniture = new Furniture({
 		name,
 		serialNumber,
@@ -131,7 +138,8 @@ router.post("/furnitures/new", (req, res, next) => {
 		material,
 		type,
 		description,
-		creator
+		creator,
+		pictures
 	});
 
 	newFurniture
