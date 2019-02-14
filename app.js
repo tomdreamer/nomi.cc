@@ -79,15 +79,39 @@ app.use(passport.session());
 app.use(flash());
 app.use((req, res, next) => {
 	// send flash messages to the hbs file
-	// (req.flash()comes from the "connect-flash" npm package)
 	res.locals.messages = req.flash();
 
-	//send the logged-in user's info to hbs files for ALL pages
 	//(req.user is defined by Passport and contains the logged-in user's info)
 	res.locals.currentUser = req.user;
 
-	//tel Express we are ready to move to the routes now
-	// (you need this or your pages will stat loading forever)
+	// make ACL available for logged users in controllers and views.
+	if (req.user !== undefined) {
+		res.locals.role = req.user.role;
+
+		switch (req.user.role) {
+		case "admin":
+			res.locals.isAdmin = true;
+			break;
+
+		case "editor":
+			res.locals.isEditor = true;
+			break;
+
+		case "designer":
+			res.locals.isDesigner = true;
+			break;
+
+		case "crafter":
+			res.locals.isCrafter = true;
+			break;
+
+		default:
+			res.locals.isCustomer = true;
+
+			break;
+		}
+	}
+
 	next();
 });
 

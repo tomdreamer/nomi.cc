@@ -9,4 +9,9 @@ router.get("/", (req, res, next) => {
 	res.render("index");
 });
 
+/* GET shopping cart page */
+router.get("/cart", (req, res, next) => {
+	res.render("cart");
+});
+
 module.exports = router;
