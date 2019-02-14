@@ -1,8 +1,8 @@
 {{#with manufacturerItem}}
-<div class="show-workshop-details w-100 position-fixed"></div>
+<div class="show-workshop-details w-100 position-fixed" style="background-image: url({{this.pictures.[1]}})"></div>
 <div class="jumbotron text-light">
 	<h1>{{this.name}}</h1>
-	<p class="lead text-muted mt-4"><i class="fa fa-map-marker"></i> {{this.address.city}}, {{this.address.country}}. <br>
+	<p class="lead text-light mt-4"><i class="fa fa-map-marker"></i> {{this.address.city}}, {{this.address.country}}. <br>
 		{{this.address.streetAddress}}
 		{{this.address.zipCode}} <br> {{this.phoneNum}}</p>
 </div>

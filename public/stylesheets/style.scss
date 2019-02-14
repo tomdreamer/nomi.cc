@@ -18,11 +18,16 @@ $headings-font-family: "Asap", Arial, sans-serif !default;
 $headings-font-weight: 600 !default;
 
 $theme-colors: (
-  "primary": rgba(26, 0, 221, 1),
-  "secondary": #15d18f,
-  "danger": #ff4136,
-  "dark": #0e1329
+  "primary": #333,
+  "secondary": #f6f3eb,
+  "danger": #d9534f,
+  "warning": #ffe9a9,
+  "success": #b3c2bf,
+  "dark": #333,
+  "light": #f2f2f2
 );
+
+$enable-rounded: false;
 
 @import "node_modules/bootstrap/scss/bootstrap";
 
