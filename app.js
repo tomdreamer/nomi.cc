@@ -133,4 +133,7 @@ app.use("/", furniture);
 const manufacturer = require("./routes/manufacturer-route");
 app.use("/", manufacturer);
 
+const quote = require("./routes/user-quotes-route");
+app.use("/", quote);
+
 module.exports = app;
