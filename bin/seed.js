@@ -14,7 +14,7 @@ const furnitureData = require("./furnitures.json");
 const manufacturerData = require("./manufacturers.json");
 
 mongoose
-	.connect("mongodb://localhost/nomi", {
+	.connect(process.env.MONGODB_URI, {
 		useNewUrlParser: true
 	})
 	.then(x => {
