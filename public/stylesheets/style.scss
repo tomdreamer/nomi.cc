@@ -26,6 +26,7 @@ $theme-colors: (
   "dark": #333,
   "light": #f2f2f2
 );
+$navbar-padding-y: (1rem / 4);
 
 $enable-rounded: false;
 
@@ -43,7 +44,7 @@ body {
 }
 
 .main {
-  padding: 56px 0;
+  padding: 48px 0;
 }
 
 /* Navbar */
@@ -57,7 +58,7 @@ body {
 }
 
 .fixed-top-2 {
-  margin-top: 56px;
+  margin-top: 48px;
 }
 
 /* 404 Page */

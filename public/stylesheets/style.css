@@ -2864,7 +2864,7 @@ input[type="button"].btn-block {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5rem 1rem; }
+  padding: 0.25rem 1rem; }
   .navbar > .container,
   .navbar > .container-fluid {
     display: flex;
@@ -6756,7 +6756,7 @@ body {
   -moz-osx-font-smoothing: grayscale; }
 
 .main {
-  padding: 56px 0; }
+  padding: 48px 0; }
 
 /* Navbar */
 .navbar .dropdown-menu .form-control {
@@ -6766,7 +6766,7 @@ body {
   padding: 0.282rem 1rem; }
 
 .fixed-top-2 {
-  margin-top: 56px; }
+  margin-top: 48px; }
 
 /* 404 Page */
 .fill-404 {
