@@ -29,7 +29,6 @@ const Quote = require("../models/quote-model");
                 Furniture.findById(furnitureId)
                     .then(queryResult => {
                         res.locals.furnitureItem = queryResult;
-                        res.locals.isShopping = true;
                         res.render("auth-views/user-crafter-like.hbs");
                     })
             
@@ -38,11 +37,11 @@ const Quote = require("../models/quote-model");
             .catch(err=> next(err))
     });
 
-    router.get("/collaboration/:furnitureItemId/check",(req, res, next)=>{
+    router.get("/collaboration/:furnitureItemId/:creatorID/check",(req, res, next)=>{
         const { furnitureItemId } = req.params;
-
+        const { creatorID } = req.params;
         Quote
-        .create({furniture:furnitureItemId, crafter: req.user._id})
+        .create({furniture:furnitureItemId, designer:creatorID, crafter:req.user._id})
 
         .catch(err => next(err))
         .then(()=>res.redirect("/collaboration"))
