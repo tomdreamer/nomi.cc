@@ -3,8 +3,10 @@
 		{{#each furnitureArray}}
 		<div class="col-sm-4">
 			<div class="card">
-				<img class="card-img-top" src="{{this.pictures.url.[1]}}" alt="Card image cap"
-					style="height: 200px; width: 100%; display: block;">
+				<a href="/furnitures/{{this._id}}">
+					<img class="card-img-top" src="{{this.pictures.url.[1]}}" alt="Card image cap"
+						style="height: 200px; width: 100%; display: block;">
+				</a>
 				<div class="card-body">
 					<h5 class="card-title"> {{this.name}} </h5>
 					<p class="card-text">${{this.stdPrice}}.00</p>
