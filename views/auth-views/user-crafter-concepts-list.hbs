@@ -1,7 +1,10 @@
 <div class="col-md-12">
 	<div class="row">
 		<div class="col-sm-12 mb-2 border-bottom">
-			<a class="btn btn-success mb-2" href="/furnitures/add" role="button">Add furniture</a>
+			<p class="lead">
+				Here is a list of project pending for a place to be built.
+
+			</p> {{!-- <a class="btn btn-success mb-2" href="/furnitures/add" role="button">Add furniture</a> --}}
 		</div>
 	</div>
 	<div class="row">
@@ -12,9 +15,9 @@
 					style="height: 200px; width: 100%; display: block;">
 				<div class="card-body">
 					<h5 class="card-title"> {{this.name}} </h5>
-					<p class="card-text">${{this.stdPrice}}.00</p>
+					<p class="card-text text-uppercase">by {{this.creator.name}}</p>
 					<p class="card-text"> {{this.description}}</p>
-					<a href="/furnitures/{{this._id}}/quote" class="btn btn-primary">See </a>
+					<a href="/furnitures/{{this._id}}/quote" class="btn btn-primary">Find out more </a>
 				</div>
 			</div>
 		</div>
