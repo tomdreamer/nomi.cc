@@ -6800,6 +6800,11 @@ body {
   100% {
     background-position: 0% 50%; } }
 
+/* homepage */
+img.intro-image {
+  -webkit-filter: grayscale(20%);
+  filter: grayscale(20%); }
+
 /* TABLES */
 table.dataTable thead .sorting:after,
 table.dataTable thead .sorting:before,
@@ -6814,12 +6819,13 @@ table.dataTable thead .sorting_desc_disabled:before {
   bottom: 0.5em; }
 
 .show-workshop-details {
-  background: url("https://dummyimage.com/1920x1080/dedede/f2f2f2&text=Big+img") no-repeat center center;
+  background: url("https://dummyimage.com/1920x1080/dedede/f2f2f2&text=Big+img");
   height: 450px;
   /* must be same as jumbotron */
   top: 0;
   left: 0;
-  z-index: -1; }
+  z-index: -1;
+  object-fit: fill; }
 
 .show-workshop-details + div {
   height: 450px;
@@ -6828,5 +6834,39 @@ table.dataTable thead .sorting_desc_disabled:before {
 
 img.cart-thumbnail {
   height: 45px; }
+
+/* Features */
+.sec-features .row:nth-of-type(n + 2) {
+  margin-top: 160px; }
+
+.sec-features .row:last-of-type {
+  margin-bottom: 160px; }
+
+.sec-features .feature-icon {
+  max-width: 150px; }
+
+/* Testimonials */
+.sec-testimonials {
+  padding-top: 128px;
+  padding-bottom: 128px; }
+
+/* Carousel */
+.carousel-indicators {
+  bottom: -30px; }
+  .carousel-indicators li {
+    background: rgba(33, 33, 33, 0.1); }
+    .carousel-indicators li:focus, .carousel-indicators li:hover {
+      background: rgba(33, 33, 33, 0.5); }
+  .carousel-indicators .active {
+    background: rgba(33, 33, 33, 0.75); }
+
+.carousel-control-next,
+.carousel-control-prev {
+  color: #212121; }
+
+.carousel-control-next:focus, .carousel-control-next:hover,
+.carousel-control-prev:focus,
+.carousel-control-prev:hover {
+  color: #111; }
 
 /*# sourceMappingURL=style.css.map */
