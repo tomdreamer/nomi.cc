@@ -11,13 +11,15 @@
     <tr>
       <th class="th-sm">Role
       </th>
-      
+      <th class="th-sm">Is intresded by the project
+      </th>
     </tr>
   </thead>
   
   <tbody id="myTable">
     {{#each furnitureArray}}
-    <tr><td>
+    <tr>
+      <td>
 		<div class="col-sm-4 p-0 border-right border-bottom">
 			<div class="py-3 rounded-0 m-2">
 				<a href="/furnitures/{{this._id}}" class="">
@@ -27,12 +29,31 @@
 				<div class="card-body">
 					<h5 class="card-title"> {{this.name}} </h5>
 					<p class="card-text">${{this.stdPrice}}.00</p>
-					<p class="card-text"> {{truncate this.description 140}}</p>
+					{{!-- <p class="card-text"> {{truncate this.description 140}}</p> --}}
 					<a href="/furnitures/{{this._id}}" class="btn btn-primary">See </a>
 				</div>
 			</div>
 		</div>
-    </td></tr>
+    </td>
+    <td>
+    {{#each this.crafters}}
+    
+		<div class="col-sm-4 p-0 border-right border-bottom">
+			<div class="py-3 rounded-0 m-2">
+				<a href="/furnitures/{{this._id}}" class="">
+					<img class="card-img-top" src="{{this.pictures}}" alt="Card image cap"
+						style="height: 200px; width: 100%; display: block;">
+				</a>
+				<div class="card-body">
+					<h5 class="card-title"> {{this.name}} </h5>
+					<p class="card-text">${{this.surname}}.00</p>
+				</div>
+			</div>
+		</div>
+    
+    {{/each}}
+    </td>
+    </tr>
 		{{/each}}
     
   </tbody>
@@ -41,11 +62,13 @@
     <tr>
       <th>Role
       </th>
-      
+      <th>Company Name
+      </th>
     </tr>
   </tfoot>
 </table>
 
+  <br>
 
    
 <script>
