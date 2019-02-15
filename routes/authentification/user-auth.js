@@ -254,12 +254,11 @@ router.get("/signout", (req, res, next) => {
 
 /*Dashboard that present's when you log in depending on your role */
 router.get("/dashboard", (req, res, next) => {
-	
 	if (req.user.role === "designer") {
 		Furniture.find({ creator: { $eq: req.user._id } })
 			.sort({ rating: -1 })
-			.then(furnitureResult => {			
-				Quote.find({designer: { $eq: req.user._id }})
+			.then(furnitureResult => {
+				Quote.find({ designer: { $eq: req.user._id } })
 					.populate("crafter")
 					.then(quoteResult => {
 						// group the crafters by furniture
@@ -269,28 +268,27 @@ router.get("/dashboard", (req, res, next) => {
 							if (!groupedCrafters[furnitureId]) {
 								groupedCrafters[furnitureId] = [];
 							}
-							groupedCrafters[furnitureId].push(element.crafter) 
+							groupedCrafters[furnitureId].push(element.crafter);
 						});
 
-						
 						// combine furniture results with crafters
 						const combinedResults = furnitureResult.map(oneFurniture => {
 							const furnitureObject = oneFurniture.toObject();
 							const furnitureId = oneFurniture._id.toString();
-							
+
 							if (groupedCrafters[furnitureId]) {
 								furnitureObject.crafters = groupedCrafters[furnitureId];
 							} else {
 								furnitureObject.crafters = [];
 							}
-							
-							return furnitureObject;								
+
+							return furnitureObject;
 						});
 
 						res.locals.furnitureArray = combinedResults;
 						res.render("auth-views/user-designer-dashboard.hbs");
 					})
-					.catch(err => next(err));			
+					.catch(err => next(err));
 			})
 			.catch(err => next(err));
 	}
@@ -303,6 +301,10 @@ router.get("/dashboard", (req, res, next) => {
 			})
 			// catch next(err) skip straight to error
 			.catch(err => next(err));
+	}
+	// TODO DRY UP
+	if (req.user.role === "admin") {
+		res.redirect("/users");
 	}
 });
 

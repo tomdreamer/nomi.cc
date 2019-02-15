@@ -11,7 +11,7 @@ const fileUploader = require("../config/file-upload.js");
 router.get("/furnitures/add", (req, res, next) => {
 	res.render("./furniture/add");
 	if (!req.user) {
-		req.flash("danger", "You must be login");
+		req.flash("danger", "Please log-in.");
 		res.redirect("/login");
 		// use return to STOP the function here if you are NOT logged-in
 		return;

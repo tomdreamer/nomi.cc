@@ -7,6 +7,12 @@ const Manufacturer = require("../models/manufacturer-model");
 /* Manufacturer Add */
 router.get("/workshops/add", (req, res, next) => {
 	res.render("./manufacturer/add");
+	if (!req.user) {
+		req.flash("danger", "Please log-in.");
+		res.redirect("/login");
+		// use return to STOP the function here if you are NOT logged-in
+		return;
+	}
 });
 
 /* GET Manufacturers index  */
