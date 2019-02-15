@@ -34,6 +34,11 @@ $(document).ready(function() {
 		parallax();
 	});
 
+	// user table
+	$("#userTable").DataTable({
+		searching: true // false to disable search (or any other option)
+	});
+
 	// typewriter effect
 	var TxtType = function(el, toRotate, period) {
 		this.toRotate = toRotate;
