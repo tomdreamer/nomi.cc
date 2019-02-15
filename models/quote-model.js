@@ -6,6 +6,8 @@ const Schema = mongoose.Schema;
 
 const quoteSchema = new Schema(
     {
+    designer: 
+    { type: Schema.Types.ObjectId, ref: "User", required: true },
     furniture: 
     { type: Schema.Types.ObjectId, ref: "User", required: true },
     crafter:

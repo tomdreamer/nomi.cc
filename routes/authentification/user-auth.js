@@ -4,7 +4,7 @@ const bcrypt = require("bcrypt");
 const User = require("../../models/user-model.js");
 const Furniture = require("../../models/furniture-model");
 const Manufacturer = require("../../models/manufacturer-model");
-
+const Quote = require("../../models/quote-model");
 const fileUploader = require("../../config/file-upload.js");
 
 const router = express.Router();
@@ -258,11 +258,40 @@ router.get("/dashboard", (req, res, next) => {
 	if (req.user.role === "designer") {
 		Furniture.find({ creator: { $eq: req.user._id } })
 			.sort({ rating: -1 })
-			.then(queryResults => {
-				res.locals.furnitureArray = queryResults;
-				res.render("auth-views/user-designer-dashboard.hbs");
+			.then(furnitureResult => {			
+				Quote.find({designer: { $eq: req.user._id }})
+					.populate("crafter")
+					.then(quoteResult => {
+						// group the crafters by furniture
+						let groupedCrafters = {};
+						quoteResult.forEach(element => {
+							const furnitureId = element.furniture.toString();
+							if (!groupedCrafters[furnitureId]) {
+								groupedCrafters[furnitureId] = [];
+							}
+							groupedCrafters[furnitureId].push(element.crafter) 
+						});
+
+						
+						// combine furniture results with crafters
+						const combinedResults = furnitureResult.map(oneFurniture => {
+							const furnitureObject = oneFurniture.toObject();
+							const furnitureId = oneFurniture._id.toString();
+							
+							if (groupedCrafters[furnitureId]) {
+								furnitureObject.crafters = groupedCrafters[furnitureId];
+							} else {
+								furnitureObject.crafters = [];
+							}
+							
+							return furnitureObject;								
+						});
+
+						res.locals.furnitureArray = combinedResults;
+						res.render("auth-views/user-designer-dashboard.hbs");
+					})
+					.catch(err => next(err));			
 			})
-			// catch next(err) skip straight to error
 			.catch(err => next(err));
 	}
 	if (req.user.role === "crafter") {
