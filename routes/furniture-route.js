@@ -3,6 +3,7 @@ const express = require("express");
 const router = express.Router();
 
 const Furniture = require("../models/furniture-model");
+const Cart = require("../models/cart-model");
 
 const fileUploader = require("../config/file-upload.js");
 
@@ -227,7 +228,7 @@ router.post("/furnitures/:furnitureId/update", (req, res, next) => {
 			console.log("Furniture has been updated 🔥");
 			req.flash(
 				"success",
-				`<bold>${queryResult.name}</bold> has been succuessfuly udpated !`
+				`${queryResult.name} has been succuessfuly udpated !`
 			);
 
 			res.redirect(`/furnitures/${queryResult._id}`);
@@ -252,4 +253,23 @@ router.get("/furnitures/:furnitureId/delete", (req, res, next) => {
 		.catch(err => next(err));
 });
 
+// /* Furniture Add to Cart */
+router.get("/furnitures/:furnitureId/add-to-cart", (req, res, next) => {
+	const { furnitureId } = req.params;
+
+	var cart = new Cart(req.session.cart ? req.session.cart : {});
+
+	Furniture.findById(furnitureId)
+		.then(queryResult => {
+			req.session.cart.push(queryResult._id);
+			req.flash("success", `${queryResult.name} has been added to your cart!`);
+			res.redirect(`/furnitures/${queryResult._id}`);
+		})
+
+		.catch(error => {
+			console.log(error);
+			req.flash("danger", `${error.message}`);
+			res.redirect("/furnitures");
+		});
+});
 module.exports = router;
