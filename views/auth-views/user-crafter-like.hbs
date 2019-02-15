@@ -61,7 +61,7 @@
                     <a class="btn btn-outline-danger ml-2" href="/collaboration/{{../quote._id}}/delete"
 					onclick="return confirm('Are you sure you don't want to collaborate?')">Remove collab </a>
                     {{else}}
-						<a class="btn btn-outline-success ml-2" href="/collaboration/{{this._id}}/check"
+						<a class="btn btn-outline-success ml-2" href="/collaboration/{{this._id}}/{{this.creator}}/check"
 					onclick="return confirm('Are you sure you want to participate to thit project?')">I want to collaborate! <i class="fas fa-thumbs-up"></i></a>
                     {{/if}}
 						
