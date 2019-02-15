@@ -110,6 +110,7 @@ body {
 img.intro-image {
   -webkit-filter: grayscale(20%);
   filter: grayscale(20%);
+  max-height: 400px;
 }
 /* TABLES */
 table.dataTable thead .sorting:after,
